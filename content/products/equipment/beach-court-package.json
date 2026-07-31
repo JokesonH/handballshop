@@ -1,0 +1,41 @@
+{
+  "slug": "beach-court-package",
+  "category": "equipment",
+  "subcategory": "beach-courts",
+  "brand": null,
+  "status": "enquire",
+  "fulfillment": "freight",
+  "price": null,
+  "featured": true,
+  "todo": "Source sand-anchor system rated for Canadian beach permits. Confirm whether municipalities require removable anchors.",
+  "name": {
+    "en": "Beach Court Package — goals, nets, lines & anchors",
+    "fr": "Ensemble terrain de plage — buts, filets, lignes et ancrages"
+  },
+  "summary": {
+    "en": "Everything needed to lay a regulation 27m × 12m beach handball court on public sand.",
+    "fr": "Tout le nécessaire pour tracer un terrain réglementaire de 27 m × 12 m sur le sable public."
+  },
+  "description": {
+    "en": [
+      "Beach handball is the format actually growing in Canada — no gym booking, no resin, no hardwood. The bottleneck is not interest, it is that nobody on this continent sells the court.",
+      "This package covers a full regulation setup: two goals sized for sand, weighted or screw-anchor bases depending on your beach's permit rules, boundary webbing for a 27m × 12m court, and corner markers.",
+      "Sold as a quoted package because the anchor system depends on your municipality. Tell us where the court is going and we will spec it against local rules."
+    ],
+    "fr": [
+      "Le handball de plage est le format qui croît réellement au Canada : ni réservation de gymnase, ni résine, ni plancher de bois. Le goulot d'étranglement n'est pas l'intérêt, c'est que personne sur ce continent ne vend le terrain.",
+      "Cet ensemble couvre une installation réglementaire complète : deux buts adaptés au sable, des bases lestées ou à ancrage à vis selon les règles de permis de votre plage, des sangles de délimitation pour un terrain de 27 m × 12 m, et des marqueurs de coin.",
+      "Vendu sur soumission, car le système d'ancrage dépend de votre municipalité. Dites-nous où ira le terrain et nous l'adapterons aux règles locales."
+    ]
+  },
+  "specs": [
+    {
+      "label": { "en": "Court size", "fr": "Dimensions du terrain" },
+      "value": { "en": "27m × 12m", "fr": "27 m × 12 m" }
+    },
+    {
+      "label": { "en": "Goal size", "fr": "Dimensions du but" },
+      "value": { "en": "3.00m × 2.00m", "fr": "3,00 m × 2,00 m" }
+    }
+  ]
+}

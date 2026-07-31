@@ -1,0 +1,41 @@
+{
+  "slug": "match-resin-tin",
+  "category": "resin",
+  "subcategory": "resin-wax",
+  "brand": null,
+  "status": "coming-soon",
+  "fulfillment": "stock",
+  "price": null,
+  "featured": true,
+  "todo": "Confirm TDG / ground-transport classification for domestic shipping before listing as available. This is the item most often refused by air freight.",
+  "name": {
+    "en": "Match Resin — 500ml tin",
+    "fr": "Résine de match — boîte de 500 ml"
+  },
+  "summary": {
+    "en": "Water-soluble match resin, stocked domestically. The hardest handball item to get into Canada.",
+    "fr": "Résine de match soluble à l'eau, gardée en stock au pays. L'article de handball le plus difficile à faire entrer au Canada."
+  },
+  "description": {
+    "en": [
+      "Resin is the single hardest thing to buy for handball in Canada. It is a restricted air-freight item, so most European sellers will not ship it here at any price — which is why Canadian clubs end up asking players to carry tins back in checked luggage.",
+      "We stock it domestically and ship it by ground.",
+      "Before you order: check whether your facility allows it. Many Canadian gyms ban resin outright because of what it does to floor finishes and hardware. If yours does, the resin-free grip section covers the alternatives."
+    ],
+    "fr": [
+      "La résine est le produit le plus difficile à acheter pour le handball au Canada. Classée matière restreinte en fret aérien, la plupart des vendeurs européens refusent de l'expédier ici à tout prix — d'où les clubs canadiens qui demandent aux joueurs de rapporter des boîtes dans leurs bagages enregistrés.",
+      "Nous la gardons en stock au pays et l'expédions par voie terrestre.",
+      "Avant de commander : vérifiez si votre installation l'autorise. Beaucoup de gymnases canadiens l'interdisent en raison de son effet sur les finis de plancher et la quincaillerie. Si c'est votre cas, la section adhérence sans résine couvre les solutions de rechange."
+    ]
+  },
+  "specs": [
+    {
+      "label": { "en": "Volume", "fr": "Volume" },
+      "value": { "en": "500ml", "fr": "500 ml" }
+    },
+    {
+      "label": { "en": "Type", "fr": "Type" },
+      "value": { "en": "Water-soluble", "fr": "Soluble à l'eau" }
+    }
+  ]
+}

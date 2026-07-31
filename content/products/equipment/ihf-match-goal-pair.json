@@ -1,0 +1,45 @@
+{
+  "slug": "ihf-match-goal-pair",
+  "category": "equipment",
+  "subcategory": "goals-and-nets",
+  "brand": null,
+  "status": "enquire",
+  "fulfillment": "freight",
+  "price": null,
+  "featured": true,
+  "todo": "Confirm supplier, crate dimensions and LTL freight partner before quoting. Verify IHF certification paperwork.",
+  "name": {
+    "en": "Regulation Indoor Goal — pair",
+    "fr": "But d'intérieur réglementaire — la paire"
+  },
+  "summary": {
+    "en": "3m x 2m IHF-spec match goals with nets, anchors and floor sockets. Quoted per delivery.",
+    "fr": "Buts de match 3 m x 2 m aux normes IHF, avec filets, ancrages et douilles de plancher. Chiffré par livraison."
+  },
+  "description": {
+    "en": [
+      "The single item that stops Canadian handball clubs from forming. A gym can be booked, players can be recruited and a coach can be found — and none of it matters without two regulation goals on the floor.",
+      "Full IHF match specification: 3 metres wide, 2 metres high, 8cm square profile posts in alternating club colours, with a net depth that holds a shot instead of spitting it back onto the court.",
+      "Ships as freight on a pallet. Because delivery cost depends entirely on where the gym is and whether it has a loading dock, every order is quoted individually — the quote covers the crate, the carrier, and a realistic delivery window."
+    ],
+    "fr": [
+      "L'article qui empêche à lui seul la formation de clubs de handball au Canada. On peut réserver un gymnase, recruter des joueurs et trouver un entraîneur — rien de tout cela ne compte sans deux buts réglementaires sur le plancher.",
+      "Spécification de match IHF complète : 3 mètres de largeur, 2 mètres de hauteur, poteaux à profilé carré de 8 cm aux couleurs alternées du club, avec une profondeur de filet qui retient le tir au lieu de le renvoyer sur le terrain.",
+      "Expédié par transport routier sur palette. Comme le coût de livraison dépend entièrement de l'emplacement du gymnase et de la présence d'un quai de chargement, chaque commande est chiffrée individuellement : la soumission couvre la caisse, le transporteur et une fenêtre de livraison réaliste."
+    ]
+  },
+  "specs": [
+    {
+      "label": { "en": "Dimensions", "fr": "Dimensions" },
+      "value": { "en": "3.00m × 2.00m", "fr": "3,00 m × 2,00 m" }
+    },
+    {
+      "label": { "en": "Post profile", "fr": "Profilé de poteau" },
+      "value": { "en": "80mm square", "fr": "Carré de 80 mm" }
+    },
+    {
+      "label": { "en": "Shipping", "fr": "Expédition" },
+      "value": { "en": "LTL freight, palletised", "fr": "Transport LTL, palettisé" }
+    }
+  ]
+}
