@@ -10,11 +10,21 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+/**
+ * The page must 404 in the component, not via generateStaticParams.
+ *
+ * Returning [] here does NOT suppress the route: [locale] is declared by the
+ * parent layout's generateStaticParams, and those params still generate the
+ * page. Verified by inspecting .next/server/app — en/fund.html was being
+ * built despite the empty array. notFound() is the only reliable gate.
+ */
+
 export async function generateMetadata({
   params,
 }: PageProps<"/[locale]/fund">): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
+  if (!getSite().fund.public) return {};
   const dict = await getDictionary(locale);
   return {
     title: dict.fund.title,
@@ -30,6 +40,9 @@ export default async function FundPage({ params }: PageProps<"/[locale]/fund">) 
   const typed = locale as Locale;
   const dict = await getDictionary(typed);
   const site = getSite();
+
+  // Not public yet. No donation claim reaches the live site until this flips.
+  if (!site.fund.public) notFound();
 
   /*
     The stated basis is read from content/site.json, never hardcoded. Whatever

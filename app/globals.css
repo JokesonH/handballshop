@@ -53,13 +53,6 @@
     color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
-    /* Graph-paper substrate — barely visible, but the page stops feeling
-       like a blank div and starts feeling like stock. */
-    background-image:
-      linear-gradient(var(--color-rule) 1px, transparent 1px),
-      linear-gradient(90deg, var(--color-rule) 1px, transparent 1px);
-    background-size: 96px 96px;
-    background-position: -1px -1px;
   }
 
   ::selection {

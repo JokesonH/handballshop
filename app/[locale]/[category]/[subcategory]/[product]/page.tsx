@@ -15,15 +15,12 @@ export const dynamicParams = false;
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
-    getProducts()
-      // Merch has its own flat route — see app/[locale]/merch/[product]
-      .filter((product) => product.category !== "merch")
-      .map((product) => ({
+    getProducts().map((product) => ({
         locale,
         category: product.category,
         subcategory: product.subcategory,
-        product: product.slug,
-      }))
+      product: product.slug,
+    }))
   );
 }
 

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/locales";
 
 export type NavChild = { href: string; label: string; code?: string };
@@ -14,16 +13,32 @@ export type NavItem = {
   children?: NavChild[];
 };
 
+/**
+ * Only the strings this component actually renders.
+ *
+ * Do NOT widen this to the full Dictionary. Header is a client component, so
+ * every prop it receives is serialised into the RSC payload of every page —
+ * passing the whole dictionary published the entire (non-public) Fund copy
+ * into the page source sitewide. Keep client-component props narrow.
+ */
+export type HeaderCopy = {
+  strapline: string;
+  menu: string;
+  close: string;
+  language: string;
+  clubs: string;
+};
+
 type Props = {
   locale: Locale;
-  dict: Dictionary;
+  copy: HeaderCopy;
   brandName: string;
   categoryNav: NavItem[];
 };
 
 export default function Header({
   locale,
-  dict,
+  copy,
   brandName,
   categoryNav,
 }: Props) {
@@ -46,9 +61,7 @@ export default function Header({
 
   const items: NavItem[] = [
     ...categoryNav,
-    { href: `/${locale}/merch`, label: dict.nav.merch },
-    { href: `/${locale}/fund`, label: dict.nav.fund },
-    { href: `/${locale}/clubs`, label: dict.nav.clubs },
+    { href: `/${locale}/clubs`, label: copy.clubs },
   ];
 
   const otherLocale: Locale = locale === "en" ? "fr" : "en";
@@ -60,12 +73,8 @@ export default function Header({
       {/* Ledger strip — reads like the header of a printed order form */}
       <div className="rule-b bg-ink text-bone">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-5 py-1.5">
-          <p className="code-sm text-resin">
-            10% · {dict.merch.fundBadge}
-          </p>
-          <p className="code-sm hidden text-bone/45 sm:block">
-            SHIPPED EX-CANADA · CAD
-          </p>
+          <p className="code-sm text-resin">{copy.strapline}</p>
+          <p className="code-sm hidden text-bone/45 sm:block">CAD · EN/FR</p>
         </div>
       </div>
 
@@ -77,9 +86,9 @@ export default function Header({
               {brandName}
             </span>
             <span className="code-sm mb-1 hidden text-graphite group-hover:text-resin-deep sm:block">
-              EQUIP.&nbsp;CAT.
+              HANDBALL
               <br />
-              ED.&nbsp;01
+              APPAREL
             </span>
           </Link>
 
@@ -90,16 +99,16 @@ export default function Header({
               onClick={closeMenus}
               className="code hidden text-graphite transition-colors hover:text-ink sm:block"
             >
-              {dict.nav.language}
+              {copy.language}
             </Link>
             <button
               type="button"
               onClick={() => setMobileOpen((o) => !o)}
               aria-expanded={mobileOpen}
-              aria-label={mobileOpen ? dict.nav.close : dict.nav.menu}
+              aria-label={mobileOpen ? copy.close : copy.menu}
               className="code border border-ink px-3 py-2 text-ink transition-colors hover:bg-ink hover:text-bone lg:hidden"
             >
-              {mobileOpen ? dict.nav.close : dict.nav.menu}
+              {mobileOpen ? copy.close : copy.menu}
             </button>
           </div>
         </div>
@@ -193,7 +202,7 @@ export default function Header({
               onClick={closeMenus}
               className="code mt-4 inline-block text-resin-deep"
             >
-              {dict.nav.language}
+              {copy.language}
             </Link>
           </nav>
         </div>

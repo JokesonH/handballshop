@@ -96,9 +96,16 @@ export default async function LocaleLayout({
       <body>
         <Header
           locale={typed}
-          dict={dict}
           brandName={site.brandName}
           categoryNav={categoryNav}
+          // Narrow by design — see HeaderCopy in components/Header.tsx
+          copy={{
+            strapline: dict.merch.fundBadge,
+            menu: dict.nav.menu,
+            close: dict.nav.close,
+            language: dict.nav.language,
+            clubs: dict.nav.clubs,
+          }}
         />
         <main>{children}</main>
         <Footer

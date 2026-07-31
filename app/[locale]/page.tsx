@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import GoalDrawing from "@/components/GoalDrawing";
+import CourtDrawing from "@/components/CourtDrawing";
 import LeadForm from "@/components/LeadForm";
 import ProductCard from "@/components/ProductCard";
 import {
@@ -51,13 +51,13 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               style={{ animationDelay: "300ms" }}
             >
               <Link
-                href={`/${locale}/equipment`}
+                href={`/${locale}/tops`}
                 className="code border border-ink bg-resin px-7 py-4 text-ink shadow-[3px_3px_0_var(--color-ink)] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_var(--color-ink)]"
               >
                 {dict.home.heroCta} →
               </Link>
               <Link
-                href={`/${locale}/fund`}
+                href={`/${locale}/about`}
                 className="code border border-ink px-7 py-4 text-ink transition-colors hover:bg-ink hover:text-bone"
               >
                 {dict.home.heroCtaSecondary}
@@ -67,7 +67,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
 
           {/* Fig. 1 */}
           <div className="relative">
-            <GoalDrawing className="w-full text-ink" />
+            <CourtDrawing className="w-full text-ink" />
           </div>
         </div>
       </section>
@@ -125,7 +125,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               {dict.home.gapBody}
             </p>
             <Link
-              href={`/${locale}/equipment`}
+              href={`/${locale}/tops`}
               className="code mt-8 inline-block border-b-2 border-resin pb-1 text-resin transition-colors hover:text-bone"
             >
               {dict.home.gapCta} →
@@ -158,23 +158,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         </section>
       )}
 
-      {/* ================= FUND ================= */}
-      <section className="rule-b bg-resin">
-        <div className="mx-auto grid max-w-[1400px] items-center gap-8 px-5 py-16 lg:grid-cols-[1fr_auto]">
-          <div>
-            <p className="code text-ink/55">{dict.fund.kicker}</p>
-            <p className="display-title mt-3 text-[clamp(1.75rem,4.5vw,3rem)] text-ink">
-              {site.fund.commitment[typed]}
-            </p>
-          </div>
-          <Link
-            href={`/${locale}/fund`}
-            className="code justify-self-start border border-ink bg-bone px-7 py-4 text-ink transition-colors hover:bg-ink hover:text-bone"
-          >
-            {dict.home.fundCta} →
-          </Link>
-        </div>
-      </section>
 
       {/* ================= LIST ================= */}
       <section className="mx-auto max-w-[1400px] px-5 py-20">

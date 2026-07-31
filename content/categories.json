@@ -1,395 +1,62 @@
 [
   {
-    "slug": "shoes",
+    "slug": "tops",
     "order": 1,
-    "name": {
-      "en": "Shoes",
-      "fr": "Chaussures"
-    },
+    "name": { "en": "Tops", "fr": "Hauts" },
     "tagline": {
-      "en": "Indoor court shoes built for the pivot, the plant and the jump.",
-      "fr": "Chaussures de salle conçues pour l'appui, la pivot et l'impulsion."
+      "en": "Tees, long sleeves and heavyweight fleece.",
+      "fr": "T-shirts, manches longues et molleton épais."
     },
     "intro": {
-      "en": "Handball is played on grip. Running shoes slide, basketball shoes are too heavy in the forefoot, and neither holds up to a lateral cut on a resin court. These are purpose-built indoor court shoes with gum outsoles, reinforced midfoot cages and the low, stable ride the sport needs.",
-      "fr": "Le handball se joue sur l'adhérence. Les chaussures de course glissent, celles de basketball sont trop lourdes à l'avant-pied, et aucune ne résiste à un appui latéral sur un terrain résiné. Voici des chaussures de salle spécialisées : semelle gomme, renfort de médio-pied et maintien bas et stable."
+      "en": "The core of the line. Heavyweight cotton, boxy cuts, printed on demand so nothing sits in a warehouse and nothing gets thrown away. Sizing runs unisex — take one up if you want it looser.",
+      "fr": "Le cœur de la collection. Coton épais, coupes amples, imprimés sur demande : rien ne dort en entrepôt, rien n'est jeté. Tailles unisexes — prenez au-dessus pour un tombé plus ample."
     },
     "children": [
+      { "slug": "tees", "name": { "en": "T-shirts", "fr": "T-shirts" } },
       {
-        "slug": "mens",
-        "name": {
-          "en": "Men's",
-          "fr": "Hommes"
-        }
+        "slug": "long-sleeve",
+        "name": { "en": "Long sleeve", "fr": "Manches longues" }
       },
+      { "slug": "hoodies", "name": { "en": "Hoodies", "fr": "Kangourous" } },
       {
-        "slug": "womens",
-        "name": {
-          "en": "Women's",
-          "fr": "Femmes"
-        }
-      },
-      {
-        "slug": "youth",
-        "name": {
-          "en": "Youth",
-          "fr": "Juniors"
-        }
-      },
-      {
-        "slug": "goalkeeper",
-        "name": {
-          "en": "Goalkeeper",
-          "fr": "Gardiens de but"
-        }
+        "slug": "crewnecks",
+        "name": { "en": "Crewnecks", "fr": "Chandails ras du cou" }
       }
     ]
   },
   {
-    "slug": "balls",
+    "slug": "headwear",
     "order": 2,
-    "name": {
-      "en": "Balls",
-      "fr": "Ballons"
-    },
+    "name": { "en": "Headwear", "fr": "Chapeaux" },
     "tagline": {
-      "en": "Every IHF size, from foam minis to the senior men's size 3.",
-      "fr": "Toutes les tailles IHF, du mini en mousse au ballon senior masculin taille 3."
+      "en": "Caps and beanies for gym, beach and the walk home.",
+      "fr": "Casquettes et tuques pour le gymnase, la plage et le retour à la maison."
     },
     "intro": {
-      "en": "Handball sizing runs backwards from most sports — the numbers get bigger as the players do. Size is set by age and gender under IHF rules, and playing with the wrong one is the fastest way to build bad throwing mechanics. If you are not sure, read the ball size guide first.",
-      "fr": "Les tailles de handball fonctionnent à l'inverse de la plupart des sports : le chiffre grandit avec le joueur. La taille est fixée par l'âge et le genre selon les règles de l'IHF, et jouer avec la mauvaise est le plus court chemin vers de mauvais gestes de tir. En cas de doute, consultez d'abord le guide des tailles."
+      "en": "Embroidered, not printed — it holds up to a season of being stuffed in a kit bag.",
+      "fr": "Brodés, non imprimés — ils tiennent le coup après une saison au fond d'un sac de sport."
     },
     "children": [
-      {
-        "slug": "size-3",
-        "name": {
-          "en": "Size 3 — Men's",
-          "fr": "Taille 3 — Hommes"
-        }
-      },
-      {
-        "slug": "size-2",
-        "name": {
-          "en": "Size 2 — Women's",
-          "fr": "Taille 2 — Femmes"
-        }
-      },
-      {
-        "slug": "size-1",
-        "name": {
-          "en": "Size 1 — Youth",
-          "fr": "Taille 1 — Juniors"
-        }
-      },
-      {
-        "slug": "size-0",
-        "name": {
-          "en": "Size 0 — Mini",
-          "fr": "Taille 0 — Mini"
-        }
-      },
-      {
-        "slug": "beach",
-        "name": {
-          "en": "Beach balls",
-          "fr": "Ballons de plage"
-        }
-      },
-      {
-        "slug": "foam-rubber",
-        "name": {
-          "en": "Foam & rubber",
-          "fr": "Mousse et caoutchouc"
-        }
-      },
-      {
-        "slug": "street",
-        "name": {
-          "en": "Street handball",
-          "fr": "Street handball"
-        }
-      }
+      { "slug": "caps", "name": { "en": "Caps", "fr": "Casquettes" } },
+      { "slug": "beanies", "name": { "en": "Beanies", "fr": "Tuques" } }
     ]
   },
   {
-    "slug": "apparel",
+    "slug": "accessories",
     "order": 3,
-    "name": {
-      "en": "Apparel",
-      "fr": "Vêtements"
-    },
+    "name": { "en": "Accessories", "fr": "Accessoires" },
     "tagline": {
-      "en": "Match kit, training layers and everything for the bench.",
-      "fr": "Tenues de match, couches d'entraînement et tout pour le banc."
+      "en": "Socks, bags and the small stuff.",
+      "fr": "Chaussettes, sacs et petits articles."
     },
     "intro": {
-      "en": "Stock apparel in men's, women's and youth cuts. Every listing carries its fit in the product details. If you need club colours, numbers or sponsor placement, that is custom teamwear — send us the roster and we will quote it.",
-      "fr": "Vêtements en coupes hommes, femmes et juniors. Chaque fiche précise sa coupe. Pour des couleurs de club, des numéros ou des commanditaires, il s'agit de tenues personnalisées : envoyez-nous votre alignement et nous vous ferons une soumission."
+      "en": "The cheap way in. Stickers for the water bottle, socks for the gym, a bag that holds a ball and a pair of shoes.",
+      "fr": "L'entrée de gamme. Autocollants pour la gourde, chaussettes pour le gymnase, un sac qui contient un ballon et une paire de chaussures."
     },
     "children": [
-      {
-        "slug": "shirts",
-        "name": {
-          "en": "Shirts & jerseys",
-          "fr": "Maillots"
-        }
-      },
-      {
-        "slug": "shorts",
-        "name": {
-          "en": "Shorts",
-          "fr": "Shorts"
-        }
-      },
-      {
-        "slug": "tracksuits",
-        "name": {
-          "en": "Tracksuits & warm-ups",
-          "fr": "Survêtements"
-        }
-      },
-      {
-        "slug": "jackets",
-        "name": {
-          "en": "Jackets & sweats",
-          "fr": "Vestes et chandails"
-        }
-      },
-      {
-        "slug": "socks",
-        "name": {
-          "en": "Socks",
-          "fr": "Chaussettes"
-        }
-      },
-      {
-        "slug": "base-layers",
-        "name": {
-          "en": "Base layers",
-          "fr": "Sous-vêtements techniques"
-        }
-      }
-    ]
-  },
-  {
-    "slug": "beach",
-    "order": 4,
-    "name": {
-      "en": "Beach Handball",
-      "fr": "Handball de plage"
-    },
-    "tagline": {
-      "en": "Sand-specific gear for Canada's fastest-growing handball format.",
-      "fr": "Équipement sablé pour le format de handball qui grandit le plus vite au Canada."
-    },
-    "intro": {
-      "en": "Beach handball is where the sport is actually growing in Canada — it needs no gym booking, no resin and no hardwood. This is the player-facing gear. For goals, nets, boundary lines and anchor kits, see court & club equipment.",
-      "fr": "Le handball de plage est le format qui croît réellement au Canada : ni réservation de gymnase, ni résine, ni plancher de bois. Voici l'équipement du joueur. Pour les buts, filets, lignes et ancrages, voyez l'équipement de terrain et de club."
-    },
-    "crossLink": "equipment/beach-courts",
-    "children": [
-      {
-        "slug": "beach-socks",
-        "name": {
-          "en": "Beach socks",
-          "fr": "Chaussettes de plage"
-        }
-      },
-      {
-        "slug": "beach-balls",
-        "name": {
-          "en": "Beach balls",
-          "fr": "Ballons de plage"
-        }
-      },
-      {
-        "slug": "beach-apparel",
-        "name": {
-          "en": "Beach apparel",
-          "fr": "Vêtements de plage"
-        }
-      },
-      {
-        "slug": "sunglasses",
-        "name": {
-          "en": "Sunglasses",
-          "fr": "Lunettes de soleil"
-        }
-      }
-    ]
-  },
-  {
-    "slug": "protection",
-    "order": 5,
-    "name": {
-      "en": "Protection & Braces",
-      "fr": "Protections et orthèses"
-    },
-    "tagline": {
-      "en": "Knees, elbows, ankles — the three that end handball seasons.",
-      "fr": "Genoux, coudes, chevilles : les trois qui mettent fin aux saisons."
-    },
-    "intro": {
-      "en": "Handball has one of the highest knee and shoulder injury rates in indoor sport. Preventive bracing is normal here, not a sign of an existing injury. Sizing is by measurement, not by shoe or shirt size — check each product's chart.",
-      "fr": "Le handball présente l'un des taux de blessures au genou et à l'épaule les plus élevés des sports de salle. Le port préventif d'orthèses y est la norme, et non le signe d'une blessure. Les tailles se prennent à la mesure : consultez le tableau de chaque produit."
-    },
-    "children": [
-      {
-        "slug": "knee",
-        "name": {
-          "en": "Knee",
-          "fr": "Genouillères"
-        }
-      },
-      {
-        "slug": "elbow",
-        "name": {
-          "en": "Elbow",
-          "fr": "Coudières"
-        }
-      },
-      {
-        "slug": "goalkeeper",
-        "name": {
-          "en": "Goalkeeper",
-          "fr": "Protections gardien"
-        }
-      },
-      {
-        "slug": "ankle",
-        "name": {
-          "en": "Ankle",
-          "fr": "Chevillères"
-        }
-      },
-      {
-        "slug": "shoulder-wrist",
-        "name": {
-          "en": "Shoulder & wrist",
-          "fr": "Épaules et poignets"
-        }
-      },
-      {
-        "slug": "sleeves",
-        "name": {
-          "en": "Arm & calf sleeves",
-          "fr": "Manchons bras et mollets"
-        }
-      },
-      {
-        "slug": "compression-socks",
-        "name": {
-          "en": "Compression socks",
-          "fr": "Chaussettes de compression"
-        }
-      }
-    ]
-  },
-  {
-    "slug": "equipment",
-    "order": 6,
-    "name": {
-      "en": "Court & Club Equipment",
-      "fr": "Équipement de terrain et de club"
-    },
-    "tagline": {
-      "en": "Goals, nets and court lines — the part nobody else in North America stocks.",
-      "fr": "Buts, filets et lignes : ce que personne d'autre en Amérique du Nord ne tient en stock."
-    },
-    "intro": {
-      "en": "You cannot start a handball club in Canada without goals, and until now you could not buy one here. European handball retailers do not sell court hardware at all. This category is why we exist. Goals, frames and full court packages ship by freight and are quoted per order — the quote covers the crate, the carrier and the delivery window to your gym or beach.",
-      "fr": "On ne peut pas fonder un club de handball au Canada sans buts, et jusqu'ici on ne pouvait pas en acheter ici. Les détaillants européens ne vendent aucun équipement de terrain. Cette catégorie est notre raison d'être. Les buts, structures et ensembles complets sont expédiés par transport routier et font l'objet d'une soumission : caisse, transporteur et fenêtre de livraison à votre gymnase ou votre plage."
-    },
-    "children": [
-      {
-        "slug": "goals-and-nets",
-        "name": {
-          "en": "Goals & nets",
-          "fr": "Buts et filets"
-        }
-      },
-      {
-        "slug": "beach-courts",
-        "name": {
-          "en": "Beach courts",
-          "fr": "Terrains de plage"
-        }
-      },
-      {
-        "slug": "court-marking",
-        "name": {
-          "en": "Court marking",
-          "fr": "Marquage de terrain"
-        }
-      },
-      {
-        "slug": "referee",
-        "name": {
-          "en": "Referee",
-          "fr": "Arbitrage"
-        }
-      },
-      {
-        "slug": "training",
-        "name": {
-          "en": "Training",
-          "fr": "Entraînement"
-        }
-      },
-      {
-        "slug": "team-gear",
-        "name": {
-          "en": "Team gear",
-          "fr": "Matériel d'équipe"
-        }
-      }
-    ]
-  },
-  {
-    "slug": "resin",
-    "order": 7,
-    "name": {
-      "en": "Resin & Wax",
-      "fr": "Résine et cire"
-    },
-    "tagline": {
-      "en": "Reliably stocked in Canada. Finally.",
-      "fr": "Enfin disponible de façon fiable au Canada."
-    },
-    "intro": {
-      "en": "Resin is the single hardest thing to buy for handball in Canada — it is a restricted air-freight item, so most European sellers will not ship it here at any price. We stock it domestically. Before you order, check whether your facility allows it: many Canadian gyms ban resin outright, which is why the resin-free section exists.",
-      "fr": "La résine est le produit le plus difficile à obtenir pour le handball au Canada : classée matière restreinte en fret aérien, la plupart des vendeurs européens refusent de l'expédier ici à tout prix. Nous la gardons en stock au pays. Avant de commander, vérifiez si votre installation l'autorise : beaucoup de gymnases canadiens l'interdisent, d'où la section sans résine."
-    },
-    "children": [
-      {
-        "slug": "resin-wax",
-        "name": {
-          "en": "Resin & wax",
-          "fr": "Résine et cire"
-        }
-      },
-      {
-        "slug": "removers",
-        "name": {
-          "en": "Removers & cleaners",
-          "fr": "Dissolvants et nettoyants"
-        }
-      },
-      {
-        "slug": "resin-free",
-        "name": {
-          "en": "Resin-free grip",
-          "fr": "Adhérence sans résine"
-        }
-      },
-      {
-        "slug": "applicators",
-        "name": {
-          "en": "Tins & applicators",
-          "fr": "Boîtiers et applicateurs"
-        }
-      }
+      { "slug": "socks", "name": { "en": "Socks", "fr": "Chaussettes" } },
+      { "slug": "bags", "name": { "en": "Bags", "fr": "Sacs" } },
+      { "slug": "stickers", "name": { "en": "Stickers", "fr": "Autocollants" } }
     ]
   }
 ]

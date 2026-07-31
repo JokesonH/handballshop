@@ -21,7 +21,10 @@ export default function Footer({ locale, dict, site, categories }: Props) {
 
   const company = [
     { href: `/${locale}/about`, label: dict.nav.about },
-    { href: `/${locale}/fund`, label: dict.nav.fund },
+    // The Fund link only appears once site.fund.public flips to true.
+    ...(site.fund.public
+      ? [{ href: `/${locale}/fund`, label: dict.nav.fund }]
+      : []),
     { href: `/${locale}/clubs`, label: dict.nav.clubs },
     { href: `/${locale}/contact`, label: dict.nav.contact },
     { href: `/${locale}/privacy`, label: dict.footer.privacy },
@@ -39,7 +42,7 @@ export default function Footer({ locale, dict, site, categories }: Props) {
             <p className="display-title text-4xl text-bone">
               {site.brandName}
             </p>
-            <p className="code-sm mt-2 text-resin">EQUIPMENT CATALOGUE · ED. 01</p>
+            <p className="code-sm mt-2 text-resin">CANADIAN HANDBALL APPAREL</p>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-bone/60">
               {dict.meta.tagline}
             </p>
@@ -61,14 +64,6 @@ export default function Footer({ locale, dict, site, categories }: Props) {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href={`/${locale}/merch`}
-                  className="text-sm text-bone/75 transition-colors hover:text-resin"
-                >
-                  {dict.nav.merch}
-                </Link>
-              </li>
             </ul>
           </div>
 

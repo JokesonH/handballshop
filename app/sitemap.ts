@@ -8,7 +8,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const categories = getCategories();
   const products = getProducts();
 
-  const staticPaths = ["", "/merch", "/fund", "/clubs"];
+  const staticPaths = [
+    "",
+    "/clubs",
+    // /fund is omitted until site.fund.public is true
+    ...(site.fund.public ? ["/fund"] : []),
+  ];
 
   return locales.flatMap((locale) => [
     ...staticPaths.map((path) => ({

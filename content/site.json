@@ -1,19 +1,20 @@
 {
-  "_todo": "PLACEHOLDER BRAND. 'Northcourt' is a stand-in so nothing is hardcoded — replace brandName, merchBrand and domain once the real name is chosen. Do NOT use 'Handball Canada': that is the national federation's legal name and implies an endorsement that does not exist.",
+  "_todo": "PLACEHOLDER BRAND. 'Northcourt' is a stand-in so nothing is hardcoded — replace brandName and merch.brand once the real name is chosen. Do NOT use 'Handball Canada': that is the national federation's legal name and implies an endorsement that does not exist.",
 
   "brandName": "Northcourt",
   "domain": "northcourt.ca",
 
   "merch": {
-    "_todo": "Merch line name. Keep it distinct from the federation. Fulfilment source is swappable — see components/BuyPanel.tsx.",
-    "brand": "Northcourt Club",
+    "brand": "Northcourt",
     "source": "pod",
+    "_todo": "Shopify Basic + Tapstitch app. Enable the Buy Button sales channel, then paste the shop domain and Storefront API token here. BuyPanel.tsx renders an honest placeholder until both are set. Verify Tapstitch's Canadian shipping lead times before launch.",
     "shopifyDomain": null,
     "storefrontToken": null
   },
 
   "fund": {
-    "_todo": "DECIDE THE BASIS BEFORE LAUNCH. 'basis' drives every piece of copy on the site; changing it here changes it everywhere. Options: 'merch-sales' (10% of merch revenue — recommended, you control that margin), 'all-sales' (10% of all revenue — ~25-40% of total gross profit at normal retail margins), 'profit' (10% of net profit). Canadian Competition Act s.74.01 treats unsubstantiated donation claims as deceptive marketing, so whatever is stated here must be what actually happens and must be reported.",
+    "_note": "NOT PUBLIC. `public: false` hides every Fund surface — the nav link, the footer link, the home section, product badges — and stops the /fund route being generated at all. Nothing on the live site claims a donation, which is the point: an unsubstantiated donation claim is deceptive marketing under Competition Act s.74.01, and there is no formal arrangement yet. The intent is kept here because it shapes the brand's reason for existing, and flipping `public` to true is the only change needed to surface it.",
+    "public": false,
     "basis": "merch-sales",
     "percent": 10,
     "name": {
@@ -21,8 +22,8 @@
       "fr": "Le Fonds Northcourt"
     },
     "commitment": {
-      "en": "10% of every dollar our merch line takes in goes straight back into growing handball in Canada.",
-      "fr": "10 % de chaque dollar généré par notre ligne de vêtements est réinvesti dans la croissance du handball au Canada."
+      "en": "10% of every dollar this line takes in goes back into growing handball in Canada.",
+      "fr": "10 % de chaque dollar généré par cette collection est réinvesti dans la croissance du handball au Canada."
     },
     "partner": null,
     "partnerNote": {
@@ -32,14 +33,14 @@
   },
 
   "contact": {
-    "_todo": "Real email, phone and business address required before launch — CASL requires a physical mailing address on commercial email, and a contactable address is a Shopify/payment-processor requirement too.",
+    "_todo": "Real email and business address required before launch — CASL requires a physical mailing address on commercial email, and payment processors require a contactable address.",
     "email": null,
     "phone": null,
     "address": null
   },
 
   "forms": {
-    "_todo": "Formspree form IDs — create at formspree.io, one per form. Same pattern as project-team-wear.",
+    "_todo": "Formspree form IDs — create at formspree.io, one per form.",
     "clubEnquiry": null,
     "freightQuote": null,
     "notifyMe": null,

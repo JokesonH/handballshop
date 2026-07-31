@@ -73,6 +73,8 @@ export type SiteConfig = {
     storefrontToken: string | null;
   };
   fund: {
+    /** false hides every Fund surface and stops /fund being generated. */
+    public: boolean;
     basis: "merch-sales" | "all-sales" | "profit";
     percent: number;
     name: Localized;
@@ -191,15 +193,8 @@ export function categoryCode(category: Category): string {
   return `§${String(category.order).padStart(2, "0")}`;
 }
 
-/**
- * Canonical URL for a product.
- *
- * Merch sits outside the supplier taxonomy — it is our own line, not a
- * category of gear — so it gets a flat /merch/<slug> path instead of the
- * three-level /category/subcategory/slug the catalogue uses.
- */
+/** Canonical URL for a product. */
 export function productHref(product: Product, locale: Locale): string {
-  if (product.category === "merch") return `/${locale}/merch/${product.slug}`;
   return `/${locale}/${product.category}/${product.subcategory}/${product.slug}`;
 }
 
