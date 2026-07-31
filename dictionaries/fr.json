@@ -1,7 +1,7 @@
 {
   "meta": {
-    "tagline": "Vêtements de handball, pour le plus petit sport du Canada",
-    "description": "Vêtements pour le handball canadien. Nous sommes quelques milliers et pas une seule boutique ne vend quoi que ce soit portant le nom du sport — alors nous l'avons créée."
+    "tagline": "L'équipement réglementaire du handball canadien",
+    "description": "L'équipement réglementaire du handball canadien. Des vêtements pour ceux qui pratiquent réellement le sport au pays — conçus selon nos spécifications, imprimés ici, faits pour survivre à une saison au fond d'un sac de sport."
   },
   "nav": {
     "shop": "Boutique",
@@ -19,15 +19,15 @@
   },
   "home": {
     "heroKicker": "Vêtements de handball canadien",
-    "heroTitle": "Le handball existe à peine ici. Portez-le quand même.",
-    "heroBody": "Nous sommes quelques milliers au pays. Aucune allée dans aucun magasin, aucun maillot dans aucune vitrine, rien au centre commercial qui porte le mot. Tous les autres sports ont le droit d'être portés. Pas celui-ci. Nous avons donc fabriqué ce qui devrait déjà exister.",
+    "heroTitle": "L'équipement réglementaire du handball canadien.",
+    "heroBody": "Ni souvenir, ni chandail de partisan. Des vêtements pour ceux qui pratiquent réellement le sport au pays — conçus selon nos spécifications, imprimés ici, et faits pour survivre à une saison au fond d'un sac de sport.",
     "heroCta": "Voir la collection",
     "heroCtaSecondary": "Pourquoi nous existons",
     "shopByCategory": "La collection",
     "differenceTitle": "Pourquoi",
     "featuredTitle": "Nouveautés",
-    "gapTitle": "Un sport qu'on ne peut pas porter",
-    "gapBody": "Entrez dans n'importe quel magasin de sport au Canada : vous y trouverez le hockey, le basketball, le soccer, la course et un mur de vêtements d'entraînement. Vous n'y trouverez pas le handball. Ni chandail, ni coton ouaté, ni autocollant. Le sport se joue pourtant au pays — dans des gymnases d'école, sur des plages, dans des clubs qui tiennent grâce à des bénévoles — et rien de tout cela n'est visible. C'est exactement pour ça que nous existons.",
+    "gapTitle": "Personne n'allait le faire",
+    "gapBody": "Entrez dans n'importe quel magasin de sport au Canada : vous y trouverez le hockey, le basketball, le soccer, la course et un mur de vêtements d'entraînement. Vous n'y trouverez pas le handball. Ni chandail, ni coton ouaté, ni autocollant. Le sport se joue pourtant ici — dans des gymnases d'école, sur des plages, dans des clubs qui tiennent grâce à des bénévoles — et rien de tout cela n'est visible. Nous l'avons donc conçu nous-mêmes.",
     "gapCta": "À propos",
     "fundTitle": "10 % réinvestis dans le sport",
     "fundCta": "Comment fonctionne le Fonds",
@@ -98,7 +98,7 @@
   "merch": {
     "kicker": "La collection",
     "title": "Boutique",
-    "body": "Conçus ici, imprimés sur demande, pour un sport qui n'a jamais eu sa propre boutique.",
+    "body": "Conçus ici selon nos spécifications, imprimés sur demande, pour ceux qui jouent vraiment.",
     "fundBadge": "Imprimé sur demande · Expédié du Canada"
   },
   "footer": {

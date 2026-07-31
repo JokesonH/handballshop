@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CourtDrawing from "@/components/CourtDrawing";
+import GoalDrawing from "@/components/GoalDrawing";
 import LeadForm from "@/components/LeadForm";
 import ProductCard from "@/components/ProductCard";
 import {
@@ -67,7 +68,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
 
           {/* Fig. 1 */}
           <div className="relative">
-            <CourtDrawing className="w-full text-ink" />
+            <GoalDrawing className="w-full text-ink" />
           </div>
         </div>
       </section>
@@ -114,8 +115,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* ================= THE GAP ================= */}
-      <section className="rule-b relative grain bg-ink text-bone">
-        <div className="mx-auto grid max-w-[1400px] gap-10 px-5 py-20 lg:grid-cols-[auto_1fr] lg:gap-16">
+      <section className="rule-b relative grain overflow-hidden bg-ink text-bone">
+        {/* Court plan, ghosted — depth without another photograph */}
+        <CourtDrawing className="pointer-events-none absolute -right-24 top-1/2 w-[640px] -translate-y-1/2 text-bone opacity-[0.07]" />
+        <div className="relative z-[1] mx-auto grid max-w-[1400px] gap-10 px-5 py-20 lg:grid-cols-[auto_1fr] lg:gap-16">
           <p className="marginalia text-bone/40">§ NOTE</p>
           <div className="max-w-3xl">
             <h2 className="display-title text-[clamp(2rem,5vw,3.5rem)] text-bone">

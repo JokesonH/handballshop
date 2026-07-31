@@ -1,7 +1,7 @@
 {
   "meta": {
-    "tagline": "Handball apparel, made in Canada's smallest sport",
-    "description": "Apparel for Canadian handball. There are a few thousand of us and not one shop that sells anything with the sport's name on it — so we made one."
+    "tagline": "Standard issue for Canadian handball",
+    "description": "Standard issue for Canadian handball. Kit for the people who actually play the sport in this country — specified, printed here, built to survive a season in a gym bag."
   },
   "nav": {
     "shop": "Shop",
@@ -19,15 +19,15 @@
   },
   "home": {
     "heroKicker": "Canadian handball apparel",
-    "heroTitle": "Handball barely exists here. Wear it anyway.",
-    "heroBody": "There are a few thousand of us in this country. No aisle in any store, no kit in any window, nothing at the mall with the word on it. Every other sport gets to be worn. This one doesn't. So we made the thing that should already exist.",
+    "heroTitle": "Standard issue for Canadian handball.",
+    "heroBody": "Not a souvenir, not a fan shirt. Kit for the people who actually play the sport in this country — specified, printed here, and made to survive a season in a gym bag.",
     "heroCta": "Shop the line",
     "heroCtaSecondary": "Why we made this",
     "shopByCategory": "The line",
     "differenceTitle": "Why bother",
     "featuredTitle": "Latest",
-    "gapTitle": "A sport you can't buy into",
-    "gapBody": "Walk into any sporting goods store in Canada and you will find hockey, basketball, soccer, running, and a wall of gym wear. You will not find handball. Not a shirt, not a hoodie, not a sticker. The sport is played in this country — in school gyms, on beaches, at clubs holding on with volunteers — and none of it is visible. That's the whole reason this exists.",
+    "gapTitle": "Nobody was going to make this",
+    "gapBody": "Walk into any sporting goods store in Canada and you'll find hockey, basketball, soccer, running, and a wall of gym wear. You won't find handball. Not a shirt, not a hoodie, not a sticker. The sport is played here — in school gyms, on beaches, at clubs holding on with volunteers — and none of it is visible. So we specified it ourselves.",
     "gapCta": "About us",
     "fundTitle": "10% back into the sport",
     "fundCta": "How the Fund works",
@@ -98,7 +98,7 @@
   "merch": {
     "kicker": "The line",
     "title": "Shop",
-    "body": "Designed here, printed on demand, for a sport that has never had a shop of its own.",
+    "body": "Specified here, printed on demand, and built for the people who actually play.",
     "fundBadge": "Printed on demand · Shipped from Canada"
   },
   "footer": {
