@@ -1,6 +1,6 @@
 import Link from "next/link";
 import BuyPanel from "@/components/BuyPanel";
-import type { Product, SiteConfig } from "@/lib/catalog";
+import { partCode, type Product, type SiteConfig } from "@/lib/catalog";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/locales";
 
@@ -29,12 +29,12 @@ export default function ProductDetail({
   const image = product.images?.[0];
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10">
-      <nav aria-label="Breadcrumb" className="kicker text-nc-mute">
+    <div className="mx-auto max-w-[1400px] px-4 py-10">
+      <nav aria-label="Breadcrumb" className="code text-graphite">
         {crumbs.map((crumb, index) => (
           <span key={crumb.href}>
             {index > 0 && <span className="mx-2">/</span>}
-            <Link href={crumb.href} className="hover:text-nc-court">
+            <Link href={crumb.href} className="hover:text-ink">
               {crumb.label}
             </Link>
           </span>
@@ -44,7 +44,7 @@ export default function ProductDetail({
       <div className="mt-8 grid gap-10 lg:grid-cols-2">
         {/* Gallery */}
         <div>
-          <div className="aspect-square overflow-hidden border border-nc-line bg-nc-shell">
+          <div className="aspect-square overflow-hidden plate">
             {image ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -54,9 +54,9 @@ export default function ProductDetail({
               />
             ) : (
               /* Branded placeholder — real photography drops in later. */
-              <div className="flex h-full w-full items-center justify-center bg-nc-court">
-                <span className="display-title px-8 text-center text-2xl text-nc-paper/25">
-                  {product.brand ?? site.brandName}
+              <div className="flex h-full w-full items-center justify-center bg-[repeating-linear-gradient(45deg,var(--color-bone-dim)_0_12px,var(--color-bone)_12px_24px)]">
+                <span className="code border border-ink bg-bone px-3 py-1.5 text-graphite">
+                  FIG. PENDING
                 </span>
               </div>
             )}
@@ -69,7 +69,7 @@ export default function ProductDetail({
                   key={src}
                   src={src}
                   alt=""
-                  className="aspect-square w-full border border-nc-line object-cover"
+                  className="aspect-square w-full border border-rule object-cover"
                 />
               ))}
             </div>
@@ -78,13 +78,16 @@ export default function ProductDetail({
 
         {/* Detail */}
         <div>
-          {product.brand && (
-            <p className="kicker text-nc-resin-deep">{product.brand}</p>
-          )}
-          <h1 className="display-title mt-2 text-3xl text-nc-court sm:text-4xl">
+          <div className="flex items-baseline justify-between gap-4 border-b border-ink pb-2">
+            <span className="code text-resin-deep">
+              {product.brand ?? "CAT."}
+            </span>
+            <span className="code text-graphite">{partCode(product)}</span>
+          </div>
+          <h1 className="display-title mt-4 text-4xl text-ink sm:text-5xl">
             {product.name[locale]}
           </h1>
-          <p className="mt-4 text-base leading-relaxed text-nc-slate">
+          <p className="mt-4 text-base leading-relaxed text-ink-soft">
             {product.summary[locale]}
           </p>
 
@@ -99,12 +102,12 @@ export default function ProductDetail({
 
           {product.sizes && product.sizes.length > 0 && (
             <div className="mt-8">
-              <p className="kicker text-nc-slate">{dict.catalog.size}</p>
+              <p className="code text-ink-soft">{dict.catalog.size}</p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {product.sizes.map((size) => (
                   <span
                     key={size}
-                    className="border border-nc-line bg-white px-3 py-1.5 text-sm text-nc-ink"
+                    className="border border-ink bg-paper px-3 py-1.5 text-sm text-ink"
                   >
                     {size}
                   </span>
@@ -116,7 +119,7 @@ export default function ProductDetail({
           {product.description[locale].length > 0 && (
             <div className="mt-8 space-y-4">
               {product.description[locale].map((paragraph, index) => (
-                <p key={index} className="text-sm leading-relaxed text-nc-slate">
+                <p key={index} className="text-sm leading-relaxed text-ink-soft">
                   {paragraph}
                 </p>
               ))}
@@ -125,17 +128,17 @@ export default function ProductDetail({
 
           {product.specs && product.specs.length > 0 && (
             <div className="mt-8">
-              <p className="kicker text-nc-slate">{dict.catalog.specs}</p>
-              <dl className="mt-3 divide-y divide-nc-line border-y border-nc-line">
+              <p className="code text-ink-soft">{dict.catalog.specs}</p>
+              <dl className="mt-3 divide-y divide-rule border-y border-rule">
                 {product.specs.map((spec, index) => (
                   <div
                     key={index}
                     className="flex justify-between gap-4 py-2.5"
                   >
-                    <dt className="text-sm text-nc-slate">
+                    <dt className="text-sm text-ink-soft">
                       {spec.label[locale]}
                     </dt>
-                    <dd className="text-sm font-medium text-nc-ink">
+                    <dd className="text-sm font-medium text-ink">
                       {spec.value[locale]}
                     </dd>
                   </div>

@@ -1,22 +1,34 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Inter_Tight } from "next/font/google";
+import {
+  Big_Shoulders,
+  Spline_Sans,
+  Spline_Sans_Mono,
+} from "next/font/google";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import Header, { type NavItem } from "@/components/Header";
-import { getCategories, getSite } from "@/lib/catalog";
+import { categoryCode, getCategories, getSite } from "@/lib/catalog";
 import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
 import { alternates } from "@/lib/seo";
 import "../globals.css";
 
-const bricolage = Bricolage_Grotesque({
+/* Condensed industrial display + a workhorse grotesque + mono for every
+   label and part code. None of these appear in the sibling projects. */
+const shoulders = Big_Shoulders({
   subsets: ["latin"],
-  variable: "--font-bricolage",
-  weight: ["500", "600", "700", "800"],
+  variable: "--font-shoulders",
+  weight: ["600", "700", "800", "900"],
 });
 
-const interTight = Inter_Tight({
+const spline = Spline_Sans({
   subsets: ["latin"],
-  variable: "--font-inter-tight",
+  variable: "--font-spline",
+});
+
+const splineMono = Spline_Sans_Mono({
+  subsets: ["latin"],
+  variable: "--font-spline-mono",
+  weight: ["400", "500", "600"],
 });
 
 export const dynamicParams = false;
@@ -63,6 +75,7 @@ export default async function LocaleLayout({
   const categoryNav: NavItem[] = categories.map((category) => ({
     href: `/${locale}/${category.slug}`,
     label: category.name[typed],
+    code: categoryCode(category),
     children: [
       {
         href: `/${locale}/${category.slug}`,
@@ -78,7 +91,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${bricolage.variable} ${interTight.variable}`}
+      className={`${shoulders.variable} ${spline.variable} ${splineMono.variable}`}
     >
       <body>
         <Header

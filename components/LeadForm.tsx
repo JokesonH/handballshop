@@ -16,12 +16,14 @@ type Props = {
   submitLabel: string;
   sentLabel: string;
   errorLabel: string;
-  /** Passed through as a hidden field so one inbox can sort by source. */
   subject?: string;
   compact?: boolean;
 };
 
 type State = "idle" | "sending" | "sent" | "error";
+
+const inputCls =
+  "w-full border border-ink bg-bone px-3 py-2.5 font-mono text-sm text-ink placeholder:text-graphite focus:bg-paper focus:outline-none";
 
 export default function LeadForm({
   formId,
@@ -52,8 +54,8 @@ export default function LeadForm({
 
   if (state === "sent") {
     return (
-      <p className="border border-nc-court bg-nc-resin-wash px-4 py-3 text-sm font-medium text-nc-court">
-        {sentLabel}
+      <p className="code border border-ink bg-resin px-4 py-3 text-ink">
+        ✓ {sentLabel}
       </p>
     );
   }
@@ -68,9 +70,10 @@ export default function LeadForm({
             {!compact && (
               <label
                 htmlFor={field.name}
-                className="kicker mb-1.5 block text-nc-slate"
+                className="code mb-1.5 block text-graphite"
               >
                 {field.label}
+                {field.required && <span className="text-flag"> *</span>}
               </label>
             )}
             {field.type === "textarea" ? (
@@ -80,7 +83,7 @@ export default function LeadForm({
                 required={field.required}
                 rows={4}
                 placeholder={compact ? field.label : undefined}
-                className="w-full border border-nc-line bg-white px-3 py-2 text-sm text-nc-ink placeholder:text-nc-mute focus:border-nc-court focus:outline-none"
+                className={inputCls}
               />
             ) : (
               <input
@@ -90,7 +93,7 @@ export default function LeadForm({
                 required={field.required}
                 placeholder={compact ? field.label : undefined}
                 aria-label={compact ? field.label : undefined}
-                className="w-full border border-nc-line bg-white px-3 py-2 text-sm text-nc-ink placeholder:text-nc-mute focus:border-nc-court focus:outline-none"
+                className={inputCls}
               />
             )}
           </div>
@@ -99,20 +102,17 @@ export default function LeadForm({
         <button
           type="submit"
           disabled={state === "sending" || !formId}
-          className="kicker shrink-0 bg-nc-court px-6 py-3 text-nc-paper transition-colors hover:bg-nc-court-soft disabled:cursor-not-allowed disabled:opacity-50"
+          className="code shrink-0 border border-ink bg-ink px-6 py-3 text-bone transition-colors hover:bg-resin hover:text-ink disabled:cursor-not-allowed disabled:opacity-40"
         >
-          {submitLabel}
+          {state === "sending" ? "…" : submitLabel}
         </button>
       </div>
 
-      {state === "error" && (
-        <p className="text-sm text-nc-flag">{errorLabel}</p>
-      )}
+      {state === "error" && <p className="code text-flag">{errorLabel}</p>}
       {!formId && (
-        <p className="text-xs text-nc-mute">
-          {/* Visible in dev so an unwired form is never mistaken for a working
-              one. Set the Formspree ID in content/site.json. */}
-          Form not connected — add the Formspree ID in content/site.json.
+        <p className="code-sm text-graphite">
+          {/* Visible so an unwired form is never mistaken for a working one. */}
+          FORM NOT CONNECTED — SET FORMSPREE ID IN content/site.json
         </p>
       )}
     </form>

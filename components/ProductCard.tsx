@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { productHref, type Product } from "@/lib/catalog";
+import { partCode, productHref, type Product } from "@/lib/catalog";
 import { formatPrice } from "@/lib/format";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/locales";
@@ -21,48 +21,70 @@ export default function ProductCard({ product, dict, locale }: Props) {
   const price = formatPrice(product.price, locale);
   const href = productHref(product, locale);
   const image = product.images?.[0];
+  const isFreight = product.fulfillment === "freight";
 
   return (
-    <Link href={href} className="card card-hover group block overflow-hidden">
-      <div className="relative aspect-square overflow-hidden bg-nc-shell">
+    <Link href={href} className="plate plate-hover group flex flex-col">
+      {/* Plate header — part code + status, like a parts bin label */}
+      <div className="flex items-center justify-between gap-2 border-b border-ink px-3 py-1.5">
+        <span className="code-sm text-graphite">{partCode(product)}</span>
+        {product.status !== "available" ? (
+          <span
+            className={`code-sm ${isFreight ? "text-flag" : "text-graphite"}`}
+          >
+            {statusLabel(product, dict)}
+          </span>
+        ) : (
+          <span className="code-sm text-resin-deep">
+            {dict.status.available}
+          </span>
+        )}
+      </div>
+
+      <div className="relative aspect-[4/3] overflow-hidden border-b border-rule bg-bone-dim">
         {image ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={image}
             alt=""
             loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
           />
         ) : (
-          /* No photo yet — a branded court-line panel beats a grey box. */
-          <div className="flex h-full w-full items-center justify-center bg-nc-court">
-            <span className="display-title px-4 text-center text-lg text-nc-paper/25">
-              {product.brand ?? product.name[locale]}
+          /* No photograph yet — a blueprint placeholder, not a grey box.
+             Reads as "drawing pending", which is true. */
+          <div className="flex h-full w-full items-center justify-center bg-[repeating-linear-gradient(45deg,var(--color-bone-dim)_0_10px,var(--color-bone)_10px_20px)]">
+            <span className="code bg-bone px-2 py-1 text-graphite">
+              {product.brand ?? "FIG. PENDING"}
             </span>
           </div>
         )}
-        {product.status !== "available" && (
-          <span className="kicker absolute left-0 top-3 bg-nc-court px-2.5 py-1 text-nc-paper">
-            {statusLabel(product, dict)}
-          </span>
-        )}
+        {isFreight && <div className="hatch absolute inset-x-0 bottom-0 h-1.5" />}
       </div>
 
-      <div className="p-4">
+      <div className="flex flex-1 flex-col p-3">
         {product.brand && (
-          <p className="kicker text-nc-mute">{product.brand}</p>
+          <p className="code-sm text-graphite">{product.brand}</p>
         )}
-        <h3 className="mt-1 text-sm font-semibold leading-snug text-nc-ink">
+        <h3 className="display-title mt-1 text-lg leading-tight text-ink">
           {product.name[locale]}
         </h3>
-        <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-nc-slate">
+        <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-ink-soft">
           {product.summary[locale]}
         </p>
-        <p className="mt-3 text-sm font-semibold text-nc-court">
-          {price ?? (
-            <span className="text-nc-mute">{statusLabel(product, dict)}</span>
-          )}
-        </p>
+
+        <div className="mt-auto flex items-baseline justify-between gap-2 border-t border-rule pt-2.5">
+          <span className="display-title text-xl text-ink">
+            {price ?? (
+              <span className="code text-graphite">
+                {statusLabel(product, dict)}
+              </span>
+            )}
+          </span>
+          <span className="code-sm text-graphite transition-colors group-hover:text-resin-deep">
+            →
+          </span>
+        </div>
       </div>
     </Link>
   );

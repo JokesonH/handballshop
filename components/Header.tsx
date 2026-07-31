@@ -6,14 +6,18 @@ import { useEffect, useState } from "react";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/locales";
 
-export type NavChild = { href: string; label: string };
-export type NavItem = { href: string; label: string; children?: NavChild[] };
+export type NavChild = { href: string; label: string; code?: string };
+export type NavItem = {
+  href: string;
+  label: string;
+  code?: string;
+  children?: NavChild[];
+};
 
 type Props = {
   locale: Locale;
   dict: Dictionary;
   brandName: string;
-  /** Built from content/categories.json — see app/[locale]/layout.tsx */
   categoryNav: NavItem[];
 };
 
@@ -27,8 +31,6 @@ export default function Header({
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  // Menus close on the click that navigates — see closeMenus below. Doing it
-  // in an effect keyed on pathname would cascade an extra render.
   function closeMenus() {
     setOpenMenu(null);
     setMobileOpen(false);
@@ -49,33 +51,64 @@ export default function Header({
     { href: `/${locale}/clubs`, label: dict.nav.clubs },
   ];
 
-  // Swap locale while keeping the reader on the same page
   const otherLocale: Locale = locale === "en" ? "fr" : "en";
-  const swapHref = pathname.replace(`/${locale}`, `/${otherLocale}`) || `/${otherLocale}`;
+  const swapHref =
+    pathname.replace(`/${locale}`, `/${otherLocale}`) || `/${otherLocale}`;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-nc-line bg-nc-paper/95 backdrop-blur">
-      {/* Announcement bar — the Fund promise, on every page */}
-      <div className="bg-nc-court text-nc-paper">
-        <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-1.5 text-center">
-          <span className="kicker text-nc-resin">10%</span>
-          <span className="text-xs text-nc-paper/85">
-            {dict.merch.fundBadge}
-          </span>
+    <header className="sticky top-0 z-50 bg-bone/97 backdrop-blur-sm">
+      {/* Ledger strip — reads like the header of a printed order form */}
+      <div className="rule-b bg-ink text-bone">
+        <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-5 py-1.5">
+          <p className="code-sm text-resin">
+            10% · {dict.merch.fundBadge}
+          </p>
+          <p className="code-sm hidden text-bone/45 sm:block">
+            SHIPPED EX-CANADA · CAD
+          </p>
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-7xl items-center gap-6 px-4 py-4">
-        <Link
-          href={`/${locale}`}
-          className="display-title shrink-0 text-2xl text-nc-court"
-        >
-          {brandName}
-        </Link>
+      {/* Masthead */}
+      <div className="rule-b">
+        <div className="mx-auto flex max-w-[1400px] items-end justify-between gap-6 px-5 pb-3 pt-4">
+          <Link href={`/${locale}`} className="group flex items-end gap-3">
+            <span className="display-title text-4xl leading-none text-ink sm:text-5xl">
+              {brandName}
+            </span>
+            <span className="code-sm mb-1 hidden text-graphite group-hover:text-resin-deep sm:block">
+              EQUIP.&nbsp;CAT.
+              <br />
+              ED.&nbsp;01
+            </span>
+          </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden flex-1 items-center gap-1 lg:flex">
-          {items.map((item) => {
+          <div className="flex items-center gap-4">
+            <Link
+              href={swapHref}
+              hrefLang={otherLocale}
+              onClick={closeMenus}
+              className="code hidden text-graphite transition-colors hover:text-ink sm:block"
+            >
+              {dict.nav.language}
+            </Link>
+            <button
+              type="button"
+              onClick={() => setMobileOpen((o) => !o)}
+              aria-expanded={mobileOpen}
+              aria-label={mobileOpen ? dict.nav.close : dict.nav.menu}
+              className="code border border-ink px-3 py-2 text-ink transition-colors hover:bg-ink hover:text-bone lg:hidden"
+            >
+              {mobileOpen ? dict.nav.close : dict.nav.menu}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Index row — desktop */}
+      <nav className="rule-b hidden bg-paper lg:block">
+        <div className="mx-auto flex max-w-[1400px] items-stretch px-5">
+          {items.map((item, i) => {
             const active = pathname.startsWith(item.href);
             return (
               <div
@@ -86,24 +119,32 @@ export default function Header({
               >
                 <Link
                   href={item.href}
-                  className={`block whitespace-nowrap px-3 py-2 text-sm font-medium transition-colors ${
+                  onClick={closeMenus}
+                  className={`code flex h-full items-center gap-1.5 whitespace-nowrap border-r border-rule px-4 py-3 transition-colors ${
                     active
-                      ? "text-nc-court"
-                      : "text-nc-slate hover:text-nc-court"
-                  }`}
+                      ? "bg-ink text-bone"
+                      : "text-ink-soft hover:bg-resin hover:text-ink"
+                  } ${i === 0 ? "border-l border-rule" : ""}`}
                 >
+                  {item.code && (
+                    <span className="opacity-45">{item.code}</span>
+                  )}
                   {item.label}
                 </Link>
+
                 {item.children && openMenu === item.href && (
-                  <div className="absolute left-0 top-full min-w-56 border border-nc-line bg-white py-2 shadow-lg">
+                  <div className="absolute left-0 top-full z-10 min-w-64 border border-ink bg-paper shadow-[4px_4px_0_var(--color-rule)]">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
                         onClick={closeMenus}
-                        className="block px-4 py-2 text-sm text-nc-slate transition-colors hover:bg-nc-shell hover:text-nc-court"
+                        className="code flex items-center justify-between gap-4 border-b border-rule px-4 py-2.5 text-ink-soft transition-colors last:border-b-0 hover:bg-resin-wash hover:text-ink"
                       >
-                        {child.label}
+                        <span>{child.label}</span>
+                        {child.code && (
+                          <span className="text-graphite">{child.code}</span>
+                        )}
                       </Link>
                     ))}
                   </div>
@@ -111,49 +152,33 @@ export default function Header({
               </div>
             );
           })}
-        </nav>
-
-        <div className="ml-auto flex items-center gap-3 lg:ml-0">
-          <Link
-            href={swapHref}
-            hrefLang={otherLocale}
-            className="hidden text-xs font-semibold uppercase tracking-wider text-nc-slate transition-colors hover:text-nc-court sm:block"
-          >
-            {dict.nav.language}
-          </Link>
-          <button
-            type="button"
-            onClick={() => setMobileOpen((open) => !open)}
-            aria-expanded={mobileOpen}
-            aria-label={mobileOpen ? dict.nav.close : dict.nav.menu}
-            className="kicker border border-nc-court px-3 py-2 text-nc-court lg:hidden"
-          >
-            {mobileOpen ? dict.nav.close : dict.nav.menu}
-          </button>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile drawer */}
+      {/* Mobile index */}
       {mobileOpen && (
-        <div className="max-h-[calc(100vh-8rem)] overflow-y-auto border-t border-nc-line bg-nc-paper lg:hidden">
-          <nav className="mx-auto max-w-7xl px-4 py-4">
+        <div className="rule-b max-h-[calc(100vh-9rem)] overflow-y-auto bg-paper lg:hidden">
+          <nav className="mx-auto max-w-[1400px] px-5 py-2">
             {items.map((item) => (
-              <div key={item.href} className="border-b border-nc-line py-3">
+              <div key={item.href} className="rule-b py-3 last:border-b-0">
                 <Link
                   href={item.href}
                   onClick={closeMenus}
-                  className="display-title block text-lg text-nc-court"
+                  className="display-title flex items-baseline gap-2 text-2xl text-ink"
                 >
+                  {item.code && (
+                    <span className="code text-graphite">{item.code}</span>
+                  )}
                   {item.label}
                 </Link>
                 {item.children && (
-                  <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                  <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
                         onClick={closeMenus}
-                        className="text-sm text-nc-slate"
+                        className="code text-ink-soft"
                       >
                         {child.label}
                       </Link>
@@ -166,7 +191,7 @@ export default function Header({
               href={swapHref}
               hrefLang={otherLocale}
               onClick={closeMenus}
-              className="kicker mt-4 inline-block text-nc-court"
+              className="code mt-4 inline-block text-resin-deep"
             >
               {dict.nav.language}
             </Link>

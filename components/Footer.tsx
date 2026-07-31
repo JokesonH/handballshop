@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Category, SiteConfig } from "@/lib/catalog";
+import { categoryCode, type Category, type SiteConfig } from "@/lib/catalog";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/locales";
 
@@ -11,7 +11,7 @@ type Props = {
 };
 
 export default function Footer({ locale, dict, site, categories }: Props) {
-  const help: { href: string; label: string }[] = [
+  const help = [
     { href: `/${locale}/shipping`, label: dict.footer.shipping },
     { href: `/${locale}/returns`, label: dict.footer.returns },
     { href: `/${locale}/warranty`, label: dict.footer.warranty },
@@ -19,7 +19,7 @@ export default function Footer({ locale, dict, site, categories }: Props) {
     { href: `/${locale}/faq`, label: dict.footer.faq },
   ];
 
-  const company: { href: string; label: string }[] = [
+  const company = [
     { href: `/${locale}/about`, label: dict.nav.about },
     { href: `/${locale}/fund`, label: dict.nav.fund },
     { href: `/${locale}/clubs`, label: dict.nav.clubs },
@@ -29,26 +29,34 @@ export default function Footer({ locale, dict, site, categories }: Props) {
   ];
 
   return (
-    <footer className="mt-24 bg-nc-court-deep text-nc-paper">
-      <div className="mx-auto max-w-7xl px-4 py-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="relative grain bg-ink text-bone">
+      {/* Court sideline as the top edge */}
+      <div className="court-line opacity-30" />
+
+      <div className="mx-auto max-w-[1400px] px-5 py-16">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <p className="display-title text-2xl">{site.brandName}</p>
-            <p className="mt-3 max-w-xs text-sm text-nc-paper/70">
+            <p className="display-title text-4xl text-bone">
+              {site.brandName}
+            </p>
+            <p className="code-sm mt-2 text-resin">EQUIPMENT CATALOGUE · ED. 01</p>
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-bone/60">
               {dict.meta.tagline}
             </p>
-            <p className="kicker mt-6 text-nc-resin">{dict.footer.builtIn}</p>
           </div>
 
           <div>
-            <p className="kicker text-nc-paper/50">{dict.footer.shop}</p>
+            <p className="code text-bone/35">{dict.footer.shop}</p>
             <ul className="mt-4 space-y-2">
               {categories.map((category) => (
                 <li key={category.slug}>
                   <Link
                     href={`/${locale}/${category.slug}`}
-                    className="text-sm text-nc-paper/80 transition-colors hover:text-nc-resin"
+                    className="group flex items-baseline gap-2 text-sm text-bone/75 transition-colors hover:text-resin"
                   >
+                    <span className="code-sm text-bone/30 group-hover:text-resin">
+                      {categoryCode(category)}
+                    </span>
                     {category.name[locale]}
                   </Link>
                 </li>
@@ -56,7 +64,7 @@ export default function Footer({ locale, dict, site, categories }: Props) {
               <li>
                 <Link
                   href={`/${locale}/merch`}
-                  className="text-sm text-nc-paper/80 transition-colors hover:text-nc-resin"
+                  className="text-sm text-bone/75 transition-colors hover:text-resin"
                 >
                   {dict.nav.merch}
                 </Link>
@@ -65,13 +73,13 @@ export default function Footer({ locale, dict, site, categories }: Props) {
           </div>
 
           <div>
-            <p className="kicker text-nc-paper/50">{dict.footer.help}</p>
+            <p className="code text-bone/35">{dict.footer.help}</p>
             <ul className="mt-4 space-y-2">
               {help.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-nc-paper/80 transition-colors hover:text-nc-resin"
+                    className="text-sm text-bone/75 transition-colors hover:text-resin"
                   >
                     {link.label}
                   </Link>
@@ -81,13 +89,13 @@ export default function Footer({ locale, dict, site, categories }: Props) {
           </div>
 
           <div>
-            <p className="kicker text-nc-paper/50">{dict.footer.company}</p>
+            <p className="code text-bone/35">{dict.footer.company}</p>
             <ul className="mt-4 space-y-2">
               {company.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-nc-paper/80 transition-colors hover:text-nc-resin"
+                    className="text-sm text-bone/75 transition-colors hover:text-resin"
                   >
                     {link.label}
                   </Link>
@@ -97,18 +105,17 @@ export default function Footer({ locale, dict, site, categories }: Props) {
           </div>
         </div>
 
-        <div className="mt-14 border-t border-nc-paper/15 pt-6">
+        <div className="mt-14 border-t border-bone/15 pt-6">
           {/*
-            Independence disclaimer. This stays on every page for as long as
-            the Fund is an unaffiliated initiative — it is what keeps "10% to
+            Independence disclaimer. Stays on every page for as long as the
+            Fund is an unaffiliated initiative — it is what keeps "10% to
             Canadian handball" from reading as a federation endorsement.
           */}
-          <p className="max-w-3xl text-xs leading-relaxed text-nc-paper/50">
+          <p className="code-sm max-w-3xl leading-relaxed text-bone/40">
             {dict.footer.disclaimer}
           </p>
-          <p className="mt-3 text-xs text-nc-paper/40">
-            © {new Date().getFullYear()} {site.brandName}.{" "}
-            {dict.footer.rights}
+          <p className="code-sm mt-3 text-bone/30">
+            © {new Date().getFullYear()} {site.brandName} · {dict.footer.rights}
           </p>
         </div>
       </div>

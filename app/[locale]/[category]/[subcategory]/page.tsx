@@ -59,21 +59,21 @@ export default async function SubcategoryPage({
 
   return (
     <>
-      <section className="border-b border-nc-line bg-nc-court text-nc-paper">
-        <div className="mx-auto max-w-7xl px-4 py-16">
-          <nav aria-label="Breadcrumb" className="kicker text-nc-paper/50">
-            <Link href={`/${locale}`} className="hover:text-nc-resin">
+      <section className="border-b border-rule bg-ink text-bone">
+        <div className="mx-auto max-w-[1400px] px-4 py-16">
+          <nav aria-label="Breadcrumb" className="code text-bone/45">
+            <Link href={`/${locale}`} className="hover:text-resin">
               {site.brandName}
             </Link>
             <span className="mx-2">/</span>
             <Link
               href={`/${locale}/${category.slug}`}
-              className="hover:text-nc-resin"
+              className="hover:text-resin"
             >
               {category.name[typed]}
             </Link>
             <span className="mx-2">/</span>
-            <span className="text-nc-resin">{sub.name[typed]}</span>
+            <span className="text-resin">{sub.name[typed]}</span>
           </nav>
           <h1 className="display-title mt-4 text-4xl sm:text-5xl">
             {sub.name[typed]}
@@ -81,12 +81,12 @@ export default async function SubcategoryPage({
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-4 py-14">
+      <div className="mx-auto max-w-[1400px] px-4 py-14">
         {/* Sibling subcategories */}
         <nav className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-2">
           <Link
             href={`/${locale}/${category.slug}`}
-            className="kicker shrink-0 border border-nc-line bg-white px-4 py-2.5 text-nc-slate transition-colors hover:border-nc-court hover:text-nc-court"
+            className="code shrink-0 border border-rule bg-white px-4 py-2.5 text-ink-soft transition-colors hover:border-ink hover:text-ink"
           >
             {dict.catalog.allProducts}
           </Link>
@@ -97,10 +97,10 @@ export default async function SubcategoryPage({
                 key={child.slug}
                 href={`/${locale}/${category.slug}/${child.slug}`}
                 aria-current={active ? "page" : undefined}
-                className={`kicker shrink-0 border px-4 py-2.5 transition-colors ${
+                className={`code shrink-0 border px-4 py-2.5 transition-colors ${
                   active
-                    ? "border-nc-court bg-nc-court text-nc-paper"
-                    : "border-nc-line bg-white text-nc-slate hover:border-nc-court hover:text-nc-court"
+                    ? "border-ink bg-ink text-bone"
+                    : "border-rule bg-white text-ink-soft hover:border-ink hover:text-ink"
                 }`}
               >
                 {child.name[typed]}
@@ -109,7 +109,7 @@ export default async function SubcategoryPage({
           })}
         </nav>
 
-        <div className="court-rule my-12" />
+        <div className="court-line my-12" />
 
         {products.length > 0 ? (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -123,11 +123,11 @@ export default async function SubcategoryPage({
             ))}
           </div>
         ) : (
-          <div className="mx-auto max-w-xl border border-nc-line bg-white p-8 text-center">
-            <p className="text-base leading-relaxed text-nc-slate">
+          <div className="mx-auto max-w-xl border border-rule bg-white p-8 text-center">
+            <p className="text-base leading-relaxed text-ink-soft">
               {dict.catalog.empty}
             </p>
-            <p className="kicker mt-6 text-nc-court">{dict.catalog.emptyCta}</p>
+            <p className="code mt-6 text-ink">{dict.catalog.emptyCta}</p>
             <div className="mt-4 text-left">
               <LeadForm
                 compact

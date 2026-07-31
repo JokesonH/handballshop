@@ -17,16 +17,20 @@ export default function SectionHeading({
 }: Props) {
   const dark = tone === "dark";
   return (
-    <div className="flex flex-wrap items-end justify-between gap-6">
+    <div
+      className={`flex flex-wrap items-end justify-between gap-6 border-b pb-3 ${
+        dark ? "border-bone/20" : "border-rule"
+      }`}
+    >
       <div className="max-w-2xl">
         {kicker && (
-          <p className={`kicker ${dark ? "text-nc-resin" : "text-nc-resin-deep"}`}>
+          <p className={`code ${dark ? "text-resin" : "text-resin-deep"}`}>
             {kicker}
           </p>
         )}
         <h2
           className={`display-title mt-2 text-3xl sm:text-4xl ${
-            dark ? "text-nc-paper" : "text-nc-court"
+            dark ? "text-bone" : "text-ink"
           }`}
         >
           {title}
@@ -34,7 +38,7 @@ export default function SectionHeading({
         {body && (
           <p
             className={`mt-4 text-base leading-relaxed ${
-              dark ? "text-nc-paper/75" : "text-nc-slate"
+              dark ? "text-bone/70" : "text-ink-soft"
             }`}
           >
             {body}
@@ -44,13 +48,11 @@ export default function SectionHeading({
       {action && (
         <Link
           href={action.href}
-          className={`kicker border-b-2 pb-1 transition-colors ${
-            dark
-              ? "border-nc-resin text-nc-paper hover:text-nc-resin"
-              : "border-nc-resin text-nc-court hover:text-nc-resin-deep"
+          className={`code border-b-2 border-resin pb-1 transition-colors ${
+            dark ? "text-bone hover:text-resin" : "text-ink hover:text-resin-deep"
           }`}
         >
-          {action.label}
+          {action.label} →
         </Link>
       )}
     </div>

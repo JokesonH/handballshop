@@ -39,9 +39,9 @@ export default async function MerchPage({
 
   return (
     <>
-      <section className="bg-nc-resin text-nc-court-deep">
-        <div className="mx-auto max-w-7xl px-4 py-20">
-          <p className="kicker">{dict.merch.kicker}</p>
+      <section className="bg-resin text-ink-deep">
+        <div className="mx-auto max-w-[1400px] px-4 py-20">
+          <p className="code">{dict.merch.kicker}</p>
           <h1 className="display-title mt-4 text-4xl sm:text-6xl">
             {site.merch.brand}
           </h1>
@@ -51,7 +51,7 @@ export default async function MerchPage({
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-4 py-16">
+      <div className="mx-auto max-w-[1400px] px-4 py-16">
         {merch.length > 0 ? (
           <>
             <SectionHeading
@@ -70,8 +70,8 @@ export default async function MerchPage({
             </div>
           </>
         ) : (
-          <div className="mx-auto max-w-xl border border-nc-line bg-white p-8 text-center">
-            <p className="text-base leading-relaxed text-nc-slate">
+          <div className="mx-auto max-w-xl border border-rule bg-white p-8 text-center">
+            <p className="text-base leading-relaxed text-ink-soft">
               {dict.catalog.empty}
             </p>
             <div className="mt-6 text-left">

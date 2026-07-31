@@ -36,9 +36,9 @@ export default async function ClubsPage({
 
   return (
     <>
-      <section className="bg-nc-court text-nc-paper">
-        <div className="mx-auto max-w-7xl px-4 py-20">
-          <p className="kicker text-nc-resin">{dict.clubs.kicker}</p>
+      <section className="bg-ink text-bone">
+        <div className="mx-auto max-w-[1400px] px-4 py-20">
+          <p className="code text-resin">{dict.clubs.kicker}</p>
           <h1 className="display-title mt-4 max-w-3xl text-4xl sm:text-5xl">
             {dict.clubs.title}
           </h1>
@@ -46,11 +46,11 @@ export default async function ClubsPage({
       </section>
 
       <div className="mx-auto max-w-2xl px-4 py-16">
-        <p className="text-base leading-relaxed text-nc-slate">
+        <p className="text-base leading-relaxed text-ink-soft">
           {dict.clubs.body}
         </p>
 
-        <div className="mt-10 border border-nc-line bg-white p-6">
+        <div className="mt-10 border border-rule bg-white p-6">
           <LeadForm
             formId={site.forms.clubEnquiry}
             subject="Club enquiry"

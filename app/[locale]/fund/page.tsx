@@ -55,13 +55,13 @@ export default async function FundPage({ params }: PageProps<"/[locale]/fund">) 
 
   return (
     <>
-      <section className="bg-nc-court text-nc-paper">
-        <div className="mx-auto max-w-7xl px-4 py-24">
-          <p className="kicker text-nc-resin">{dict.fund.kicker}</p>
+      <section className="bg-ink text-bone">
+        <div className="mx-auto max-w-[1400px] px-4 py-24">
+          <p className="code text-resin">{dict.fund.kicker}</p>
           <h1 className="display-title mt-4 max-w-3xl text-4xl sm:text-6xl">
             {site.fund.name[typed]}
           </h1>
-          <p className="mt-6 max-w-2xl text-xl leading-relaxed text-nc-paper/80">
+          <p className="mt-6 max-w-2xl text-xl leading-relaxed text-bone/75">
             {site.fund.commitment[typed]}
           </p>
         </div>
@@ -69,30 +69,30 @@ export default async function FundPage({ params }: PageProps<"/[locale]/fund">) 
 
       <div className="mx-auto max-w-3xl px-4 py-16">
         {/* The number, stated precisely */}
-        <div className="border-l-4 border-nc-resin bg-nc-resin-wash p-6">
-          <p className="kicker text-nc-resin-deep">{dict.fund.basisLabel}</p>
-          <p className="display-title mt-3 text-2xl text-nc-court">
+        <div className="border-l-4 border-resin bg-resin-wash p-6">
+          <p className="code text-resin-deep">{dict.fund.basisLabel}</p>
+          <p className="display-title mt-3 text-2xl text-ink">
             {basisCopy}
           </p>
         </div>
 
         {sections.map((section) => (
           <section key={section.title} className="mt-14">
-            <h2 className="display-title text-2xl text-nc-court">
+            <h2 className="display-title text-2xl text-ink">
               {section.title}
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-nc-slate">
+            <p className="mt-4 text-base leading-relaxed text-ink-soft">
               {section.body}
             </p>
           </section>
         ))}
 
         {/* Independence — the disclaimer that keeps this honest */}
-        <section className="mt-14 border border-nc-line bg-white p-6">
-          <h2 className="display-title text-xl text-nc-court">
+        <section className="mt-14 border border-rule bg-white p-6">
+          <h2 className="display-title text-xl text-ink">
             {dict.fund.independenceTitle}
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-nc-slate">
+          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
             {site.fund.partnerNote[typed]}
           </p>
         </section>

@@ -54,30 +54,30 @@ export default async function CategoryPage({
   return (
     <>
       {/* Category hero */}
-      <section className="border-b border-nc-line bg-nc-court text-nc-paper">
-        <div className="mx-auto max-w-7xl px-4 py-16">
-          <nav aria-label="Breadcrumb" className="kicker text-nc-paper/50">
-            <Link href={`/${locale}`} className="hover:text-nc-resin">
+      <section className="border-b border-rule bg-ink text-bone">
+        <div className="mx-auto max-w-[1400px] px-4 py-16">
+          <nav aria-label="Breadcrumb" className="code text-bone/45">
+            <Link href={`/${locale}`} className="hover:text-resin">
               {site.brandName}
             </Link>
             <span className="mx-2">/</span>
-            <span className="text-nc-resin">{category.name[typed]}</span>
+            <span className="text-resin">{category.name[typed]}</span>
           </nav>
           <h1 className="display-title mt-4 max-w-3xl text-4xl sm:text-5xl">
             {category.name[typed]}
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-nc-paper/75">
+          <p className="mt-4 max-w-2xl text-lg text-bone/70">
             {category.tagline[typed]}
           </p>
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-4 py-14">
+      <div className="mx-auto max-w-[1400px] px-4 py-14">
         {/* Subcategory rail */}
         <nav className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-2">
           <Link
             href={`/${locale}/${category.slug}`}
-            className="kicker shrink-0 border border-nc-court bg-nc-court px-4 py-2.5 text-nc-paper"
+            className="code shrink-0 border border-ink bg-ink px-4 py-2.5 text-bone"
           >
             {dict.catalog.allProducts}
           </Link>
@@ -85,7 +85,7 @@ export default async function CategoryPage({
             <Link
               key={child.slug}
               href={`/${locale}/${category.slug}/${child.slug}`}
-              className="kicker shrink-0 border border-nc-line bg-white px-4 py-2.5 text-nc-slate transition-colors hover:border-nc-court hover:text-nc-court"
+              className="code shrink-0 border border-rule bg-white px-4 py-2.5 text-ink-soft transition-colors hover:border-ink hover:text-ink"
             >
               {child.name[typed]}
             </Link>
@@ -93,7 +93,7 @@ export default async function CategoryPage({
         </nav>
 
         {/* Category intro — the SEO body copy */}
-        <p className="mt-10 max-w-3xl text-base leading-relaxed text-nc-slate">
+        <p className="mt-10 max-w-3xl text-base leading-relaxed text-ink-soft">
           {category.intro[typed]}
         </p>
 
@@ -101,14 +101,14 @@ export default async function CategoryPage({
           <p className="mt-5">
             <Link
               href={`/${locale}/${category.crossLink}`}
-              className="kicker border-b-2 border-nc-resin pb-1 text-nc-court transition-colors hover:text-nc-resin-deep"
+              className="code border-b-2 border-resin pb-1 text-ink transition-colors hover:text-resin-deep"
             >
               {dict.catalog.relatedCategory} — {crossCategory.name[typed]}
             </Link>
           </p>
         )}
 
-        <div className="court-rule my-12" />
+        <div className="court-line my-12" />
 
         {/* Products, or an honest empty state */}
         {products.length > 0 ? (
@@ -123,11 +123,11 @@ export default async function CategoryPage({
             ))}
           </div>
         ) : (
-          <div className="mx-auto max-w-xl border border-nc-line bg-white p-8 text-center">
-            <p className="text-base leading-relaxed text-nc-slate">
+          <div className="mx-auto max-w-xl border border-rule bg-white p-8 text-center">
+            <p className="text-base leading-relaxed text-ink-soft">
               {dict.catalog.empty}
             </p>
-            <p className="kicker mt-6 text-nc-court">
+            <p className="code mt-6 text-ink">
               {dict.catalog.emptyCta}
             </p>
             <div className="mt-4 text-left">

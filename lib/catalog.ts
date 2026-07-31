@@ -171,6 +171,27 @@ export function getFeaturedProducts(limit = 8): Product[] {
 }
 
 /**
+ * Catalogue part code — e.g. EQ·GN·0117.
+ *
+ * Derived, never stored: a stable hash of the slug means codes can't drift
+ * out of sync with the content, and adding a product doesn't require picking
+ * a number by hand. Purely presentational — nothing resolves by code.
+ */
+export function partCode(product: Product): string {
+  const seg = (s: string) => s.replace(/[^a-z]/gi, "").slice(0, 2).toUpperCase();
+  let hash = 0;
+  for (let i = 0; i < product.slug.length; i++) {
+    hash = (hash * 31 + product.slug.charCodeAt(i)) % 10000;
+  }
+  return `${seg(product.category)}·${seg(product.subcategory)}·${String(hash).padStart(4, "0")}`;
+}
+
+/** Same idea for a category index page. */
+export function categoryCode(category: Category): string {
+  return `§${String(category.order).padStart(2, "0")}`;
+}
+
+/**
  * Canonical URL for a product.
  *
  * Merch sits outside the supplier taxonomy — it is our own line, not a

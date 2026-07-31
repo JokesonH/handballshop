@@ -2,49 +2,45 @@
 
 @theme {
   /* ------------------------------------------------------------------
-     "Court & Resin" palette.
+     "EQUIPMENT MANUAL"
 
-     Deliberately NOT the other two properties in this folder:
-     handballcanada is maple-red on arena black, project-team-wear is
-     orange on black. Both are dark. This one is light — product
-     photography reads better on paper, and retail conversion norms
-     favour it.
+     A 1970s European federation parts catalogue. Newsprint stock, hairline
+     rules, monospace part codes, engineering line-work. This is a supply
+     house, not a lifestyle brand — the design should read like something
+     you'd order a goal frame from, not something you'd scroll past.
 
-     Base is warm paper, structure is deep court blue, and the accent is
-     resin amber (the actual colour of handball resin in the tin).
+     Resin amber is the only hot colour in the system. It appears where
+     money and action are, and nowhere else. Court blue is line-work only.
+     Flag red is reserved exclusively for restricted/freight states.
      ------------------------------------------------------------------ */
 
-  /* Surfaces */
-  --color-nc-paper: #f8f6f1;
-  --color-nc-shell: #edeae1;
-  --color-nc-line: #ddd8cb;
+  /* Stock */
+  --color-bone: #e8e2d4;
+  --color-bone-dim: #ded6c4;
+  --color-paper: #f4f0e5;
 
-  /* Text */
-  --color-nc-ink: #14181f;
-  --color-nc-slate: #5b6472;
-  --color-nc-mute: #8a929e;
+  /* Ink */
+  --color-ink: #16130f;
+  --color-ink-soft: #4a443a;
+  --color-graphite: #7c7466;
+  --color-rule: #c3baa6;
 
-  /* Court blue — structure, headers, dark sections */
-  --color-nc-court: #16365a;
-  --color-nc-court-deep: #0c2038;
-  --color-nc-court-soft: #2b5687;
+  /* Resin — the accent. Burnt amber, the colour in the tin. */
+  --color-resin: #e08c2c;
+  --color-resin-deep: #a85f12;
+  --color-resin-wash: #f2dcb6;
 
-  /* Resin amber — accent, CTAs, the Fund */
-  --color-nc-resin: #e0982f;
-  --color-nc-resin-deep: #b8761a;
-  --color-nc-resin-wash: #f7ebd6;
+  /* Court line-work only */
+  --color-court: #1b4d8f;
 
-  /* Sand — beach handball surfaces */
-  --color-nc-sand: #e6dcc6;
-
-  /* Flag red — used sparingly, and never as the primary brand colour.
-     Leaning on red would read as federation branding. */
-  --color-nc-flag: #d8232a;
+  /* Restricted / freight / air-ban flags only */
+  --color-flag: #c0392b;
 }
 
 @theme inline {
-  --font-display: var(--font-bricolage), "Georgia", serif;
-  --font-sans: var(--font-inter-tight), "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-shoulders), "Haettenschweiler", sans-serif;
+  --font-sans: var(--font-spline), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-spline-mono), "SF Mono", monospace;
 }
 
 @layer base {
@@ -53,41 +49,130 @@
   }
 
   body {
-    background-color: var(--color-nc-paper);
-    color: var(--color-nc-ink);
+    background-color: var(--color-bone);
+    color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    /* Graph-paper substrate — barely visible, but the page stops feeling
+       like a blank div and starts feeling like stock. */
+    background-image:
+      linear-gradient(var(--color-rule) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule) 1px, transparent 1px);
+    background-size: 96px 96px;
+    background-position: -1px -1px;
   }
 
   ::selection {
-    background-color: var(--color-nc-resin);
-    color: var(--color-nc-court-deep);
+    background-color: var(--color-resin);
+    color: var(--color-ink);
   }
 
-  /* Visible focus everywhere — this is a commerce site and keyboard
-     checkout has to work. */
   :focus-visible {
-    outline: 2px solid var(--color-nc-court);
-    outline-offset: 2px;
+    outline: 2px solid var(--color-court);
+    outline-offset: 3px;
   }
 }
+
+/* ---------- Type ---------- */
 
 @utility display-title {
   font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.02;
-}
-
-@utility kicker {
-  font-family: var(--font-sans);
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.6875rem;
+  letter-spacing: -0.005em;
+  line-height: 0.86;
 }
 
-/* Hide scrollbars on horizontal rails while keeping scroll */
+/* Every label, code and eyebrow in the system is monospace. This is the
+   single most load-bearing decision in the design — it's what makes the
+   site read as a parts catalogue instead of a storefront. */
+@utility code {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@utility code-sm {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ---------- Structure ---------- */
+
+/* Hairline. The catalogue is built out of these. */
+@utility rule-t {
+  border-top: 1px solid var(--color-rule);
+}
+
+@utility rule-b {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+/* Court sideline — solid heavy over dashed light, like a real floor */
+@utility court-line {
+  height: 3px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-ink) 0 32px,
+    transparent 32px 44px
+  );
+}
+
+/* Panel that sits on the stock like a pasted-in plate */
+@utility plate {
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-ink);
+  box-shadow: 3px 3px 0 var(--color-rule);
+}
+
+@utility plate-hover {
+  transition:
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+  &:hover {
+    box-shadow: 6px 6px 0 var(--color-resin);
+    transform: translate(-2px, -2px);
+  }
+}
+
+/* Section number in the margin — §01, §02 … */
+@utility marginalia {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  color: var(--color-graphite);
+  text-transform: uppercase;
+}
+
+/* ---------- Atmosphere ---------- */
+
+/* Print grain. Parent must be positioned. */
+@utility grain {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  }
+}
+
+/* Diagonal hazard hatching — freight and restricted items only */
+@utility hatch {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--color-flag) 0 6px,
+    transparent 6px 14px
+  );
+}
+
 @utility no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -96,41 +181,12 @@
   }
 }
 
-/* Court-line rule: the 6m arc dashed, used as a section divider */
-@utility court-rule {
-  background-image: repeating-linear-gradient(
-    90deg,
-    var(--color-nc-line) 0 18px,
-    transparent 18px 30px
-  );
-  height: 2px;
-}
-
-/* Card surface used across the catalogue */
-@utility card {
-  background-color: #fff;
-  border: 1px solid var(--color-nc-line);
-  border-radius: 0.25rem;
-  transition:
-    border-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-@utility card-hover {
-  &:hover {
-    border-color: var(--color-nc-court-soft);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgb(20 24 31 / 0.07);
-  }
-}
-
 /* ---------- Motion ---------- */
 
-@keyframes rise {
+@keyframes plate-in {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -138,15 +194,29 @@
   }
 }
 
-/* Staggered entrance; set animation-delay inline */
 @utility rise-in {
-  animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation: plate-in 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* Technical drawing draws itself on load */
+@keyframes draw {
+  from {
+    stroke-dashoffset: var(--len, 1200);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@utility draw-in {
+  stroke-dasharray: var(--len, 1200);
+  animation: draw 1.6s cubic-bezier(0.65, 0, 0.35, 1) both;
 }
 
 @keyframes fade-up-scroll {
   from {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(22px);
   }
   to {
     opacity: 1;
@@ -154,18 +224,19 @@
   }
 }
 
-/* Scroll-linked reveal; progressive — no-ops where unsupported */
 @utility reveal {
   @supports (animation-timeline: view()) {
     animation: fade-up-scroll both;
     animation-timeline: view();
-    animation-range: entry 0% entry 40%;
+    animation-range: entry 0% entry 38%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .rise-in,
-  .reveal {
+  .reveal,
+  .draw-in {
     animation: none;
+    stroke-dashoffset: 0;
   }
 }
