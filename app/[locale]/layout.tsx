@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Big_Shoulders,
-  Spline_Sans,
-  Spline_Sans_Mono,
-} from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import Header, { type NavItem } from "@/components/Header";
@@ -12,23 +8,12 @@ import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
 import { alternates } from "@/lib/seo";
 import "../globals.css";
 
-/* Condensed industrial display + a workhorse grotesque + mono for every
-   label and part code. None of these appear in the sibling projects. */
-const shoulders = Big_Shoulders({
+/* Northcourt brand sheet V.01: one family, Space Grotesk, everywhere —
+   Bold for the wordmark/headlines, Medium for labels and body copy. */
+const grotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-shoulders",
-  weight: ["600", "700", "800", "900"],
-});
-
-const spline = Spline_Sans({
-  subsets: ["latin"],
-  variable: "--font-spline",
-});
-
-const splineMono = Spline_Sans_Mono({
-  subsets: ["latin"],
-  variable: "--font-spline-mono",
-  weight: ["400", "500", "600"],
+  variable: "--font-grotesk",
+  weight: ["400", "500", "700"],
 });
 
 export const dynamicParams = false;
@@ -89,10 +74,7 @@ export default async function LocaleLayout({
   }));
 
   return (
-    <html
-      lang={locale}
-      className={`${shoulders.variable} ${spline.variable} ${splineMono.variable}`}
-    >
+    <html lang={locale} className={grotesk.variable}>
       <body>
         <Header
           locale={typed}

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Mark from "@/components/Mark";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/locales";
 
@@ -73,13 +74,12 @@ export default function Header({
       <div className="rule-b">
         <div className="mx-auto flex max-w-[1400px] items-end justify-between gap-6 px-5 pb-3 pt-4">
           <Link href={`/${locale}`} className="group flex items-end gap-3">
+            <Mark className="mb-1 h-8 w-8 sm:h-9 sm:w-9" />
             <span className="display-title text-4xl leading-none text-ink sm:text-5xl">
               {brandName}
             </span>
             <span className="code-sm mb-1 hidden text-graphite group-hover:text-resin-deep sm:block">
-              EQUIP.&nbsp;CAT.
-              <br />
-              ED.&nbsp;01
+              {dict.meta.tagline}
             </span>
           </Link>
 
