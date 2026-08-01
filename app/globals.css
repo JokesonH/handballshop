@@ -2,54 +2,45 @@
 
 @theme {
   /* ------------------------------------------------------------------
-     NORTHCOURT — BRAND SHEET V.01
+     "EQUIPMENT MANUAL"
 
-     Foundation neutrals (Navy / Bone / Slate) carry the page. Court accents
-     (Ice, Gold, Crimson, Forest, Lavender) are each reserved for a single
-     job, same discipline as before: Gold is the only hot colour, and it
-     appears where money and action are, nowhere else. Ice is line-work and
-     structure only — it's the goal-arc colour from the mark. Crimson is
-     reserved for restricted/freight states. Forest and Lavender are brand
-     accents held in reserve for status/badge use.
+     A 1970s European federation parts catalogue. Newsprint stock, hairline
+     rules, monospace part codes, engineering line-work. This is a supply
+     house, not a lifestyle brand — the design should read like something
+     you'd order a goal frame from, not something you'd scroll past.
+
+     Resin amber is the only hot colour in the system. It appears where
+     money and action are, and nowhere else. Court blue is line-work only.
+     Flag red is reserved exclusively for restricted/freight states.
      ------------------------------------------------------------------ */
 
   /* Stock */
-  --color-bone: #f3efe6;
-  --color-bone-dim: #e7e1d3;
-  --color-paper: #f8f6f1;
+  --color-bone: #e8e2d4;
+  --color-bone-dim: #ded6c4;
+  --color-paper: #f4f0e5;
 
   /* Ink */
-  --color-ink: #0b111f;
-  --color-ink-soft: #3d4759;
-  --color-graphite: #7c879e;
-  --color-rule: #d7dbe3;
+  --color-ink: #16130f;
+  --color-ink-soft: #4a443a;
+  --color-graphite: #7c7466;
+  --color-rule: #c3baa6;
 
-  /* Resin — the accent, mapped to the sheet's Gold. */
-  --color-resin: #e8a93c;
-  --color-resin-deep: #b5822b;
-  --color-resin-wash: #f6e3ba;
+  /* Resin — the accent. Burnt amber, the colour in the tin. */
+  --color-resin: #e08c2c;
+  --color-resin-deep: #a85f12;
+  --color-resin-wash: #f2dcb6;
 
-  /* Court line-work only — the sheet's Ice, the goal-arc colour. */
-  --color-court: #7fd8e8;
+  /* Court line-work only */
+  --color-court: #1b4d8f;
 
-  /* Restricted / freight / air-ban flags only — the sheet's Crimson. */
-  --color-flag: #d8323b;
-
-  /* Reserved brand accents, not yet wired to a component. */
-  --color-forest: #2f6b5e;
-  --color-lavender: #b9c6e0;
+  /* Restricted / freight / air-ban flags only */
+  --color-flag: #c0392b;
 }
 
 @theme inline {
-  /* Northcourt brand sheet specifies one family, Space Grotesk, in two
-     weights (Bold for the wordmark/headlines, Medium for labels). These
-     three variables keep their old names — display/sans/mono — because
-     every component and utility already references them, but "mono" is
-     no longer a monospace: it's Space Grotesk Medium standing in for the
-     sheet's label typeface. */
-  --font-display: var(--font-grotesk), "Helvetica Neue", Arial, sans-serif;
-  --font-sans: var(--font-grotesk), "Helvetica Neue", Arial, sans-serif;
-  --font-mono: var(--font-grotesk), "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-shoulders), "Haettenschweiler", sans-serif;
+  --font-sans: var(--font-spline), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-spline-mono), "SF Mono", monospace;
 }
 
 @layer base {
@@ -86,7 +77,7 @@
 
 @utility display-title {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: -0.005em;
   line-height: 0.86;
@@ -106,7 +97,6 @@
 @utility code-sm {
   font-family: var(--font-mono);
   font-size: 0.625rem;
-  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }

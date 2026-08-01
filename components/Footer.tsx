@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Mark from "@/components/Mark";
 import { categoryCode, type Category, type SiteConfig } from "@/lib/catalog";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/locales";
@@ -37,13 +36,13 @@ export default function Footer({ locale, dict, site, categories }: Props) {
       <div className="mx-auto max-w-[1400px] px-5 py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <Mark className="h-9 w-9" />
-              <p className="display-title text-4xl text-bone">
-                {site.brandName}
-              </p>
-            </div>
-            <p className="code-sm mt-3 text-court">{dict.meta.tagline}</p>
+            <p className="display-title text-4xl text-bone">
+              {site.brandName}
+            </p>
+            <p className="code-sm mt-2 text-resin">EQUIPMENT CATALOGUE · ED. 01</p>
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-bone/60">
+              {dict.meta.tagline}
+            </p>
           </div>
 
           <div>
