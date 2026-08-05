@@ -39,8 +39,13 @@ GitHub → Settings → Developer settings → OAuth Apps → **New OAuth App**.
 | Field | Value |
 |---|---|
 | Application name | anything, e.g. "Northcourt CMS" |
-| Homepage URL | your deployed site URL |
-| Authorization callback URL | `https://<your-domain>/api/callback` |
+| Homepage URL | `https://handballshop.vercel.app` |
+| Authorization callback URL | `https://handballshop.vercel.app/api/callback` |
+
+(The repo is already linked to that Vercel project. If a custom domain gets
+added later, update both fields here to match — `base_url` itself won't need
+touching, since it's generated per-request from whatever origin `/admin` is
+loaded from.)
 
 Save it, then generate a **client secret**. You'll get a client ID and a
 client secret — both go into environment variables, never into the repo.
