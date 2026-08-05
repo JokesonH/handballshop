@@ -24,11 +24,12 @@ that constraint mattered enough to pick a git-backed CMS over a hosted one.
   shortcut (Netlify's hosted one) only works when the site is hosted on
   Netlify.
 
-`content/categories.json` and `content/products/**` on the `merch` category
-are the only things **not** wired into a collection: `categories.json` is a
-top-level JSON array, which doesn't fit Decap's file-collection model
-cleanly, and it's structural taxonomy that changes rarely — keep editing it
-directly.
+`content/categories.json` itself is the only thing **not** wired into a
+collection — it's a top-level JSON array, which doesn't fit Decap's
+file-collection model cleanly, and it's structural taxonomy that changes
+rarely. Keep editing it directly; every product collection reads its
+subcategory options from it live, so a new subcategory shows up in the CMS
+with no other change needed.
 
 ## One-time setup
 

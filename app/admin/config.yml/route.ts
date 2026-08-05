@@ -27,14 +27,12 @@ const LOCALIZED_TEXT_LIST = [
   { label: "Français", name: "fr", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } },
 ];
 
-function productFields(categorySlug: string, subcategoryOptions: { label: string; value: string }[] | null) {
+function productFields(categorySlug: string, subcategoryOptions: { label: string; value: string }[]) {
   return [
     { label: "Slug", name: "slug", widget: "string", hint: "Unique, kebab-case. Becomes part of the product URL and cannot be changed later without breaking links." },
     { label: "Category", name: "category", widget: "hidden", default: categorySlug },
-    subcategoryOptions
-      ? { label: "Subcategory", name: "subcategory", widget: "select", options: subcategoryOptions }
-      : { label: "Subcategory", name: "subcategory", widget: "string", hint: "Merch subcategories are free text (e.g. \"tees\") — they aren't part of content/categories.json." },
-    { label: "Brand", name: "brand", widget: "string", required: false, hint: "Leave blank until a distributor agreement exists — see README \"Seed products are placeholders\"." },
+    { label: "Subcategory", name: "subcategory", widget: "select", options: subcategoryOptions },
+    { label: "Brand", name: "brand", widget: "string", required: false, hint: "Leave blank until a supplier deal exists." },
     { label: "Status", name: "status", widget: "select", options: ["available", "coming-soon", "enquire"] },
     { label: "Fulfillment", name: "fulfillment", widget: "select", options: ["stock", "pod", "freight"] },
     { label: "Price (cents CAD)", name: "price", widget: "number", required: false, hint: "Leave blank while status is coming-soon or enquire." },
@@ -80,16 +78,6 @@ export async function GET(request: NextRequest) {
     ),
   }));
 
-  const merchCollection = {
-    name: "products_merch",
-    label: "Products — Merch",
-    folder: "content/products/merch",
-    create: true,
-    slug: "{{fields.slug}}",
-    identifier_field: "slug",
-    fields: productFields("merch", null),
-  };
-
   const settingsCollection = {
     name: "settings",
     label: "Site settings",
@@ -114,6 +102,7 @@ export async function GET(request: NextRequest) {
           {
             label: "Fund", name: "fund", widget: "object",
             fields: [
+              { label: "Public", name: "public", widget: "boolean", hint: "Off hides every Fund surface (nav, footer, home section, /fund route) — see content/site.json's note on why it starts false." },
               { label: "Basis", name: "basis", widget: "select", options: ["merch-sales", "all-sales", "profit"] },
               { label: "Percent", name: "percent", widget: "number" },
               { label: "Name", name: "name", widget: "object", fields: LOCALIZED_STRING },
@@ -161,7 +150,7 @@ export async function GET(request: NextRequest) {
     },
     media_folder: "public/uploads",
     public_folder: "/uploads",
-    collections: [settingsCollection, ...categoryCollections, merchCollection],
+    collections: [settingsCollection, ...categoryCollections],
   };
 
   return new NextResponse(dump(config, { noRefs: true }), {
