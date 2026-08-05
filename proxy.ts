@@ -27,6 +27,9 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // Skip static assets, API routes and files with extensions
-  matcher: ["/((?!_next|api|.*\\..*).*)"],
+  // Skip static assets, API routes, the CMS admin shell, and files with
+  // extensions. /admin has no extension (bare path), so it needs its own
+  // exclusion the same way /api does — otherwise this locale redirect fires
+  // before next.config.ts's /admin rewrite ever runs.
+  matcher: ["/((?!_next|api|admin|.*\\..*).*)"],
 };

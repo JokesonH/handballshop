@@ -1,0 +1,43 @@
+{
+  "slug": "match-jersey-mens",
+  "category": "apparel",
+  "subcategory": "shirts",
+  "brand": null,
+  "status": "coming-soon",
+  "fulfillment": "stock",
+  "price": null,
+  "gender": "men",
+  "featured": true,
+  "sizes": ["S", "M", "L", "XL", "2XL"],
+  "todo": "PLACEHOLDER LISTING — no apparel distributor agreement exists yet. Do not publish brand name, product photography or pricing until a supplier is signed. This seeds the apparel/shirts taxonomy so the category has a real listing instead of an empty grid.",
+  "name": {
+    "en": "Match Jersey — Men's",
+    "fr": "Maillot de match — Hommes"
+  },
+  "summary": {
+    "en": "Lightweight, breathable match jersey cut for the range of motion handball actually needs.",
+    "fr": "Maillot de match léger et respirant, taillé pour l'amplitude de mouvement qu'exige réellement le handball."
+  },
+  "description": {
+    "en": [
+      "Handball throws and blocks through a fuller shoulder range than most indoor sports, so a jersey cut for soccer or volleyball binds exactly where you need it not to.",
+      "This listing is a placeholder for the men's match jersey line: quick-dry fabric, athletic cut through the torso, reinforced seams at the shoulder.",
+      "Notify me and we'll email as soon as sizing and stock are confirmed."
+    ],
+    "fr": [
+      "Le handball sollicite l'épaule sur une amplitude plus large que la plupart des sports de salle, si bien qu'un maillot taillé pour le soccer ou le volleyball serre exactement là où il ne le faut pas.",
+      "Cette fiche est un espace réservé pour la ligne de maillots de match hommes : tissu séchage rapide, coupe athlétique au torse, coutures renforcées à l'épaule.",
+      "Inscrivez-vous pour être avisé dès que les tailles et le stock seront confirmés."
+    ]
+  },
+  "specs": [
+    {
+      "label": { "en": "Fabric", "fr": "Tissu" },
+      "value": { "en": "Quick-dry polyester blend", "fr": "Mélange polyester séchage rapide" }
+    },
+    {
+      "label": { "en": "Fit", "fr": "Coupe" },
+      "value": { "en": "Athletic", "fr": "Athlétique" }
+    }
+  ]
+}
