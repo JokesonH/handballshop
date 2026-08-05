@@ -33,6 +33,11 @@ npm run dev     # http://localhost:3000
 npm run build   # static export, currently 112 pages
 ```
 
+Editing `content/*.json` by hand is still the ground truth, but there's a
+git-backed CMS at `/admin` (Decap CMS) for editing the catalogue without
+touching JSON directly — see `docs/cms-setup.md` for the one-time GitHub
+OAuth App it needs before it works.
+
 ---
 
 ## How it fits together
