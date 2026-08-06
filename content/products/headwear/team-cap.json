@@ -1,0 +1,39 @@
+{
+  "slug": "team-cap",
+  "category": "headwear",
+  "subcategory": "caps",
+  "brand": null,
+  "status": "coming-soon",
+  "fulfillment": "pod",
+  "price": null,
+  "featured": false,
+  "gender": "unisex",
+  "sizes": ["One size"],
+  "todo": "Placeholder — also seeds the headwear folder so Decap CMS's GitHub backend has something to list (it errors trying to list a folder with zero files). Replace with the real cap once artwork and pricing are set.",
+  "name": {
+    "en": "Team Cap",
+    "fr": "Casquette d'équipe"
+  },
+  "summary": {
+    "en": "Embroidered cap, one size, adjustable strap. Design and pricing not finalized yet.",
+    "fr": "Casquette brodée, taille unique, sangle ajustable. Design et prix pas encore finalisés."
+  },
+  "description": {
+    "en": [
+      "Embroidered, not printed — holds up to a season stuffed in a kit bag.",
+      "One size, adjustable strap.",
+      "Design and print run details are still being finalized — check back soon."
+    ],
+    "fr": [
+      "Brodée, non imprimée — elle tient le coup après une saison au fond d'un sac de sport.",
+      "Taille unique, sangle ajustable.",
+      "Le design et les détails de production sont encore en finalisation — revenez bientôt."
+    ]
+  },
+  "specs": [
+    {
+      "label": { "en": "Closure", "fr": "Fermeture" },
+      "value": { "en": "Adjustable strap", "fr": "Sangle ajustable" }
+    }
+  ]
+}

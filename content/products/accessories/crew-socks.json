@@ -1,0 +1,39 @@
+{
+  "slug": "crew-socks",
+  "category": "accessories",
+  "subcategory": "socks",
+  "brand": null,
+  "status": "coming-soon",
+  "fulfillment": "pod",
+  "price": null,
+  "featured": false,
+  "gender": "unisex",
+  "sizes": ["S/M", "L/XL"],
+  "todo": "Placeholder — also seeds the accessories folder so Decap CMS's GitHub backend has something to list (it errors trying to list a folder with zero files). Replace with the real socks once artwork and pricing are set.",
+  "name": {
+    "en": "Crew Socks",
+    "fr": "Chaussettes mi-mollet"
+  },
+  "summary": {
+    "en": "Cushioned crew socks for the gym or the sand. Design and pricing not finalized yet.",
+    "fr": "Chaussettes mi-mollet coussinées pour le gymnase ou le sable. Design et prix pas encore finalisés."
+  },
+  "description": {
+    "en": [
+      "Cushioned underfoot, breathable mesh through the arch — built for a gym floor or a sand court.",
+      "Sold in pairs.",
+      "Design and print run details are still being finalized — check back soon."
+    ],
+    "fr": [
+      "Coussinées sous le pied, mailles respirantes à la voûte plantaire — pensées pour un plancher de gymnase comme pour un terrain de sable.",
+      "Vendues par paire.",
+      "Le design et les détails de production sont encore en finalisation — revenez bientôt."
+    ]
+  },
+  "specs": [
+    {
+      "label": { "en": "Height", "fr": "Hauteur" },
+      "value": { "en": "Crew", "fr": "Mi-mollet" }
+    }
+  ]
+}

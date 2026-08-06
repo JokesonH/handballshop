@@ -90,6 +90,18 @@ and commit each entry to its own branch instead of `main` directly.
 
 ## Gotchas
 
+- **A new category needs at least one product file before the CMS can open
+  it.** Every category in `content/categories.json` gets a
+  `products_<category>` collection automatically, pointing at
+  `content/products/<category>/`. If that folder doesn't exist yet (git
+  doesn't track empty directories), Decap's GitHub backend 404s trying to
+  list it and crashes the whole admin with `TypeError: Cannot read
+  properties of undefined (reading 'path')` — not just that one collection,
+  the entire app fails to load. This isn't configurable away; it's a
+  long-standing Decap/Netlify CMS limitation. Add a category to
+  `categories.json`, and in the same change seed
+  `content/products/<category>/` with at least one real file (a
+  `coming-soon` placeholder is fine) before anyone opens `/admin` again.
 - **Uploaded images land in `public/uploads`** (`media_folder` /
   `public_folder` in the config) and get committed to the repo like any
   other file. Fine at this catalogue's size; if that folder grows large,
