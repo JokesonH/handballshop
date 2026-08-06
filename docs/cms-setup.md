@@ -35,7 +35,18 @@ with no other change needed.
 
 ### 1. Create a GitHub OAuth App
 
-GitHub → Settings → Developer settings → OAuth Apps → **New OAuth App**.
+GitHub → Settings → Developer settings → **OAuth Apps** → **New OAuth App**.
+
+> **It must be an OAuth App, not a GitHub App.** The two sit next to each
+> other in the same sidebar, both hand you a Client ID and Client Secret, and
+> both complete the `/login/oauth/authorize` flow — so a GitHub App logs in
+> perfectly and then fails every write with `Resource not accessible by
+> integration`, because GitHub Apps ignore the `scope` our `/api/auth` route
+> requests and take permissions from the app's own settings instead.
+>
+> Check the client ID prefix: `Ov…` (or a 20-character hex string) is an
+> OAuth App; `Iv…` is a GitHub App — **I** for "integration", GitHub's
+> internal name for a GitHub App.
 
 | Field | Value |
 |---|---|
