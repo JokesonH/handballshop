@@ -72,6 +72,11 @@ export async function GET(request: NextRequest) {
     create: true,
     slug: "{{fields.slug}}",
     identifier_field: "slug",
+    // Folder collections default to Markdown/frontmatter — without these,
+    // Decap looks for *.md files and silently ignores every real .json
+    // product file instead of erroring, so the collection just looks empty.
+    extension: "json",
+    format: "json",
     fields: productFields(
       category.slug,
       category.children.map((child) => ({ label: child.name.en, value: child.slug }))
