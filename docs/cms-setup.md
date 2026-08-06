@@ -106,7 +106,11 @@ and commit each entry to its own branch instead of `main` directly.
   `public_folder` in the config) and get committed to the repo like any
   other file. Fine at this catalogue's size; if that folder grows large,
   that's the point to move to a real asset host and change those two
-  config keys.
+  config keys. That folder has a `README.md` in it for the same reason the
+  category-folder gotcha above exists — an empty `media_folder` breaks the
+  upload button itself (same 404-on-an-empty-folder failure, just in the
+  media library instead of a collection). Don't delete that file unless
+  something else is already committed there to take its place.
 - **Local dev**: `/admin` works against `npm run dev` too, but the OAuth
   callback URL is fixed to whatever domain you registered in step 1, so
   `http://localhost:3000/api/callback` won't complete unless you register a
