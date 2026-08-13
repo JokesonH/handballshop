@@ -1,14 +1,18 @@
 {
-  "slug": "edmonton-tee",
-  "category": "tops",
-  "subcategory": "tees",
-  "collection": "city-series",
-  "brand": null,
-  "status": "available",
-  "fulfillment": "pod",
-  "price": 4500,
-  "featured": true,
   "gender": "unisex",
+  "todo": "Artwork finalised. Product photography still needed — add via the CMS Images field.",
+  "summary": {
+    "en": "City Series tee — City Of Champions. Chest mark on the right, full graphic on the back.",
+    "fr": "T-shirt de la Série des villes — City Of Champions. Écusson à droite, graphique complet au dos."
+  },
+  "brand": null,
+  "price": 4500,
+  "name": {
+    "en": "Edmonton Tee",
+    "fr": "T-shirt Edmonton"
+  },
+  "slug": "edmonton-tee",
+  "featured": true,
   "sizes": [
     "S",
     "M",
@@ -16,27 +20,7 @@
     "XL",
     "2XL"
   ],
-  "todo": "Artwork finalised. Product photography still needed — add via the CMS Images field.",
-  "name": {
-    "en": "Edmonton Tee",
-    "fr": "T-shirt Edmonton"
-  },
-  "summary": {
-    "en": "City Series tee — City Of Champions. Chest mark on the right, full graphic on the back.",
-    "fr": "T-shirt de la Série des villes — City Of Champions. Écusson à droite, graphique complet au dos."
-  },
-  "description": {
-    "en": [
-      "Snow over a goal, the river valley sweeping behind it.",
-      "Right-chest mark, full back print. Printed on demand and shipped in 5–9 business days — nothing is held in stock.",
-      "Unisex fit. Size up for a looser cut."
-    ],
-    "fr": [
-      "La neige au-dessus d'un but, la vallée de la rivière qui se déploie derrière.",
-      "Écusson à la poitrine droite, impression complète au dos. Imprimé sur demande et expédié en 5 à 9 jours ouvrables — rien n'est gardé en stock.",
-      "Coupe unisexe. Prenez une taille au-dessus pour un tombé plus ample."
-    ]
-  },
+  "status": "available",
   "specs": [
     {
       "label": {
@@ -68,5 +52,25 @@
         "fr": "Impression sur demande"
       }
     }
-  ]
+  ],
+  "images": [
+    "/uploads/frontyeg.png",
+    "/uploads/backyeg.png"
+  ],
+  "description": {
+    "en": [
+      "Snow over a goal, the river valley sweeping behind it.",
+      "Right-chest mark, full back print. Printed on demand and shipped in 5–9 business days — nothing is held in stock.",
+      "Unisex fit. Size up for a looser cut."
+    ],
+    "fr": [
+      "La neige au-dessus d'un but, la vallée de la rivière qui se déploie derrière.",
+      "Écusson à la poitrine droite, impression complète au dos. Imprimé sur demande et expédié en 5 à 9 jours ouvrables — rien n'est gardé en stock.",
+      "Coupe unisexe. Prenez une taille au-dessus pour un tombé plus ample."
+    ]
+  },
+  "category": "tops",
+  "fulfillment": "pod",
+  "collection": "city-series",
+  "subcategory": "tees"
 }
