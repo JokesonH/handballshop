@@ -8,8 +8,22 @@
   "price": 7500,
   "featured": true,
   "gender": "unisex",
-  "sizes": ["S", "M", "L", "XL", "2XL"],
-  "colors": [{ "name": { "en": "Sand", "fr": "Sable" }, "hex": "#e8e2d3" }],
+  "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL"
+  ],
+  "colors": [
+    {
+      "name": {
+        "en": "Sand",
+        "fr": "Sable"
+      },
+      "hex": "#e8e2d3"
+    }
+  ],
   "todo": "Price is an estimate for a heavyweight POD hoodie — confirm against the actual Tapstitch base cost plus margin and the Fund cut before treating it as final. Photo supplied by the owner directly in chat; the image file itself still needs to be added to public/uploads (no way to pull it out of the conversation onto disk) — easiest is uploading it to this entry's Images field via the CMS once /admin login works.",
   "name": {
     "en": "Born in Canada Hoodie",
@@ -33,16 +47,35 @@
   },
   "specs": [
     {
-      "label": { "en": "Fabric", "fr": "Tissu" },
-      "value": { "en": "Heavyweight cotton fleece", "fr": "Molleton de coton épais" }
+      "label": {
+        "en": "Fabric",
+        "fr": "Tissu"
+      },
+      "value": {
+        "en": "Heavyweight cotton fleece",
+        "fr": "Molleton de coton épais"
+      }
     },
     {
-      "label": { "en": "Print", "fr": "Impression" },
-      "value": { "en": "Full back print", "fr": "Impression complète au dos" }
+      "label": {
+        "en": "Print",
+        "fr": "Impression"
+      },
+      "value": {
+        "en": "Full back print",
+        "fr": "Impression complète au dos"
+      }
     },
     {
-      "label": { "en": "Fulfilment", "fr": "Exécution" },
-      "value": { "en": "Print on demand", "fr": "Impression sur demande" }
+      "label": {
+        "en": "Fulfilment",
+        "fr": "Exécution"
+      },
+      "value": {
+        "en": "Print on demand",
+        "fr": "Impression sur demande"
+      }
     }
-  ]
+  ],
+  "collection": "canada"
 }

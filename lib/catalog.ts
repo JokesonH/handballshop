@@ -40,6 +40,12 @@ export type Product = {
   colors?: { name: Localized; hex: string }[];
   images?: string[];
   featured?: boolean;
+  /**
+   * Marketing collection. Orthogonal to category: a Canada-line hoodie and a
+   * City Series hoodie are both tops/hoodies, so collections cannot be
+   * modelled as categories without duplicating the taxonomy.
+   */
+  collection?: string;
   name: Localized;
   summary: Localized;
   description: Localized<string[]>;
@@ -50,6 +56,14 @@ export type Product = {
 export type CategoryChild = {
   slug: string;
   name: Localized;
+};
+
+export type Collection = {
+  slug: string;
+  order: number;
+  name: Localized;
+  tagline: Localized;
+  intro: Localized;
 };
 
 export type Category = {
@@ -109,6 +123,21 @@ export function getCategories(): Category[] {
   return readJson<Category[]>("categories.json").sort(
     (a, b) => a.order - b.order
   );
+}
+
+export function getCollections(): Collection[] {
+  return readJson<Collection[]>("collections.json").sort(
+    (a, b) => a.order - b.order
+  );
+}
+
+export function getCollection(slug: string): Collection | undefined {
+  return getCollections().find((collection) => collection.slug === slug);
+}
+
+/** Every product tagged into a collection, across all categories. */
+export function getProductsInCollection(slug: string): Product[] {
+  return getProducts().filter((product) => product.collection === slug);
 }
 
 export function getCategory(slug: string): Category | undefined {

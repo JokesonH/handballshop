@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { partCode, productHref, type Product } from "@/lib/catalog";
 import { formatPrice } from "@/lib/format";
@@ -43,12 +44,12 @@ export default function ProductCard({ product, dict, locale }: Props) {
 
       <div className="relative aspect-[4/3] overflow-hidden border-b border-rule bg-bone-dim">
         {image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={image}
             alt=""
-            loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+            fill
+            sizes="(min-width: 1280px) 22vw, (min-width: 768px) 33vw, 92vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
           />
         ) : (
           /* No photograph yet — a blueprint placeholder, not a grey box.

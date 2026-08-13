@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import BuyPanel from "@/components/BuyPanel";
 import { partCode, type Product, type SiteConfig } from "@/lib/catalog";
@@ -44,13 +45,15 @@ export default function ProductDetail({
       <div className="mt-8 grid gap-10 lg:grid-cols-2">
         {/* Gallery */}
         <div>
-          <div className="aspect-square overflow-hidden plate">
+          <div className="relative aspect-square overflow-hidden plate">
             {image ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 src={image}
                 alt={product.name[locale]}
-                className="h-full w-full object-cover"
+                fill
+                priority
+                sizes="(min-width: 1024px) 46vw, 94vw"
+                className="object-cover"
               />
             ) : (
               /* Branded placeholder — real photography drops in later. */
@@ -64,13 +67,12 @@ export default function ProductDetail({
           {product.images && product.images.length > 1 && (
             <div className="mt-3 grid grid-cols-4 gap-3">
               {product.images.slice(1, 5).map((src) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
+                <div
                   key={src}
-                  src={src}
-                  alt=""
-                  className="aspect-square w-full border border-rule object-cover"
-                />
+                  className="relative aspect-square w-full border border-rule"
+                >
+                  <Image src={src} alt="" fill sizes="128px" className="object-cover" />
+                </div>
               ))}
             </div>
           )}

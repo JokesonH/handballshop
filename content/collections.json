@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "canada",
+    "order": 1,
+    "name": { "en": "Canada", "fr": "Canada" },
+    "tagline": {
+      "en": "The national line — pieces about the sport in this country.",
+      "fr": "La ligne nationale — des pièces sur le sport au pays."
+    },
+    "intro": {
+      "en": "Handball has been played in Canada for fifty years and almost none of it is visible. This is the line that says so out loud: national team pieces, tour pieces, and the ones that just say we were here.",
+      "fr": "Le handball se joue au Canada depuis cinquante ans et presque rien de tout cela n'est visible. Voici la ligne qui le dit tout haut : pièces d'équipe nationale, pièces de tournée, et celles qui disent simplement que nous étions là."
+    }
+  },
+  {
+    "slug": "city-series",
+    "order": 2,
+    "name": { "en": "City Series", "fr": "Série des villes" },
+    "tagline": {
+      "en": "One city, one shirt. The sport as it's actually played, where it's actually played.",
+      "fr": "Une ville, un chandail. Le sport tel qu'il se joue vraiment, là où il se joue."
+    },
+    "intro": {
+      "en": "Every piece leads with a handball image — a shot, an arc, a goal — and lets the city bend it. Same chest mark on all of them, a different back on each. Designed for the people who play there, and largely illegible to everyone else, which is the point.",
+      "fr": "Chaque pièce part d'une image de handball — un tir, un arc, un but — et laisse la ville la transformer. Le même écusson à la poitrine sur toutes, un dos différent sur chacune. Conçues pour ceux qui y jouent, et largement indéchiffrables pour les autres : c'est voulu."
+    }
+  }
+]

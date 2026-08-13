@@ -1,0 +1,72 @@
+{
+  "slug": "toronto-tee",
+  "category": "tops",
+  "subcategory": "tees",
+  "collection": "city-series",
+  "brand": null,
+  "status": "coming-soon",
+  "fulfillment": "pod",
+  "price": null,
+  "featured": false,
+  "gender": "unisex",
+  "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL"
+  ],
+  "todo": "Artwork drafted (see design/toronto-back.svg). Not released yet: needs a final proof, a wash test and product photography before status flips to available.",
+  "name": {
+    "en": "Toronto Tee",
+    "fr": "T-shirt Toronto"
+  },
+  "summary": {
+    "en": "City Series tee — The 6Ix. Chest mark on the right, full graphic on the back.",
+    "fr": "T-shirt de la Série des villes — The 6Ix. Écusson à droite, graphique complet au dos."
+  },
+  "description": {
+    "en": [
+      "The skyline, and the six-metre arc over the goal. The 6ix and the 6m, same number.",
+      "Right-chest mark, full back print. Printed on demand and shipped in 5–9 business days — nothing is held in stock.",
+      "Unisex fit. Size up for a looser cut."
+    ],
+    "fr": [
+      "La ligne d'horizon et l'arc des six mètres au-dessus du but. Le 6ix et le 6 m, le même chiffre.",
+      "Écusson à la poitrine droite, impression complète au dos. Imprimé sur demande et expédié en 5 à 9 jours ouvrables — rien n'est gardé en stock.",
+      "Coupe unisexe. Prenez une taille au-dessus pour un tombé plus ample."
+    ]
+  },
+  "specs": [
+    {
+      "label": {
+        "en": "Fabric",
+        "fr": "Tissu"
+      },
+      "value": {
+        "en": "Heavyweight cotton",
+        "fr": "Coton épais"
+      }
+    },
+    {
+      "label": {
+        "en": "Print",
+        "fr": "Impression"
+      },
+      "value": {
+        "en": "Right chest + full back",
+        "fr": "Poitrine droite + dos complet"
+      }
+    },
+    {
+      "label": {
+        "en": "Fulfilment",
+        "fr": "Exécution"
+      },
+      "value": {
+        "en": "Print on demand",
+        "fr": "Impression sur demande"
+      }
+    }
+  ]
+}

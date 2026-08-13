@@ -1,5 +1,11 @@
 import type { MetadataRoute } from "next";
-import { getCategories, getProducts, getSite, productHref } from "@/lib/catalog";
+import {
+  getCategories,
+  getCollections,
+  getProducts,
+  getSite,
+  productHref,
+} from "@/lib/catalog";
 import { locales } from "@/lib/locales";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -7,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = `https://${site.domain}`;
   const categories = getCategories();
   const products = getProducts();
+  const collections = getCollections();
 
   const staticPaths = [
     "",
@@ -33,6 +40,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
       })),
     ]),
+    ...collections.map((collection) => ({
+      url: `${base}/${locale}/collections/${collection.slug}`,
+      lastModified: new Date(),
+      priority: 0.9,
+    })),
     ...products.map((product) => ({
       url: `${base}${productHref(product, locale)}`,
       lastModified: new Date(),

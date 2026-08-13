@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { dump } from "js-yaml";
-import { getCategories } from "@/lib/catalog";
+import { getCategories, getCollections } from "@/lib/catalog";
 
 /**
  * Decap CMS reads its config from here instead of a static YAML file so two
@@ -27,11 +27,12 @@ const LOCALIZED_TEXT_LIST = [
   { label: "Français", name: "fr", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } },
 ];
 
-function productFields(categorySlug: string, subcategoryOptions: { label: string; value: string }[]) {
+function productFields(categorySlug: string, subcategoryOptions: { label: string; value: string }[], collectionOptions: { label: string; value: string }[]) {
   return [
     { label: "Slug", name: "slug", widget: "string", hint: "Unique, kebab-case. Becomes part of the product URL and cannot be changed later without breaking links." },
     { label: "Category", name: "category", widget: "hidden", default: categorySlug },
     { label: "Subcategory", name: "subcategory", widget: "select", options: subcategoryOptions },
+    { label: "Collection", name: "collection", widget: "select", required: false, options: collectionOptions, hint: "Marketing collection — cuts across categories. Read live from content/collections.json." },
     { label: "Brand", name: "brand", widget: "string", required: false, hint: "Leave blank until a supplier deal exists." },
     { label: "Status", name: "status", widget: "select", options: ["available", "coming-soon", "enquire"] },
     { label: "Fulfillment", name: "fulfillment", widget: "select", options: ["stock", "pod", "freight"] },
@@ -64,6 +65,10 @@ function productFields(categorySlug: string, subcategoryOptions: { label: string
 
 export async function GET(request: NextRequest) {
   const categories = getCategories();
+  const collectionOptions = getCollections().map((c) => ({
+    label: c.name.en,
+    value: c.slug,
+  }));
 
   const categoryCollections = categories.map((category) => ({
     name: `products_${category.slug}`,
@@ -79,7 +84,8 @@ export async function GET(request: NextRequest) {
     format: "json",
     fields: productFields(
       category.slug,
-      category.children.map((child) => ({ label: child.name.en, value: child.slug }))
+      category.children.map((child) => ({ label: child.name.en, value: child.slug })),
+      collectionOptions
     ),
   }));
 
