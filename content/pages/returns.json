@@ -1,0 +1,57 @@
+{
+  "slug": "returns",
+  "title": {
+    "en": "Returns",
+    "fr": "Retours"
+  },
+  "intro": {
+    "en": "Made to order, so returns work a little differently.",
+    "fr": "Fabriqué sur commande, les retours fonctionnent donc un peu différemment."
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "Damaged, defective or wrong item",
+        "fr": "Article endommagé, défectueux ou erroné"
+      },
+      "body": {
+        "en": [
+          "If your item arrives damaged, misprinted, or isn't what you ordered, contact us within 30 days of delivery with a photo. We'll reprint and reship it at no cost, or refund it in full — your choice. You won't be asked to ship the faulty item back."
+        ],
+        "fr": [
+          "Si votre article arrive endommagé, mal imprimé ou n'est pas celui que vous avez commandé, écrivez-nous dans les 30 jours suivant la livraison avec une photo. Nous le réimprimerons et le réexpédierons sans frais, ou le rembourserons intégralement — à votre choix. Vous n'aurez pas à nous renvoyer l'article défectueux."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Change of mind and sizing",
+        "fr": "Changement d'avis et taille"
+      },
+      "body": {
+        "en": [
+          "Because each piece is printed for you specifically, we can't restock a change-of-mind return. Please use the size guide before ordering — and if you're between sizes, size up: these are cut boxy on purpose.",
+          "If a size is genuinely wrong for you, write to us anyway. We'd rather work something out than have the piece sit unworn."
+        ],
+        "fr": [
+          "Comme chaque pièce est imprimée spécialement pour vous, nous ne pouvons pas remettre en stock un retour pour changement d'avis. Consultez le guide des tailles avant de commander — et entre deux tailles, prenez la plus grande : les coupes sont volontairement amples.",
+          "Si une taille ne vous convient vraiment pas, écrivez-nous quand même. Nous préférons trouver une solution plutôt que de voir la pièce rester inutilisée."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Wrong address",
+        "fr": "Adresse erronée"
+      },
+      "body": {
+        "en": [
+          "Parcels returned to sender because of an incomplete or incorrect address can be reshipped once you send us a corrected one; reshipping is charged at cost."
+        ],
+        "fr": [
+          "Les colis retournés à l'expéditeur en raison d'une adresse incomplète ou incorrecte peuvent être réexpédiés après nous avoir transmis une adresse corrigée; la réexpédition est facturée au coût."
+        ]
+      }
+    }
+  ]
+}

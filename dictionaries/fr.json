@@ -51,7 +51,10 @@
     "clearFilters": "Effacer les filtres",
     "sizeGuide": "Guide des tailles",
     "specs": "Détails",
-    "backTo": "Retour à"
+    "backTo": "Retour à",
+    "prevImage": "Image précédente",
+    "nextImage": "Image suivante",
+    "imagePending": "FIG. À VENIR"
   },
   "status": {
     "available": "En stock",

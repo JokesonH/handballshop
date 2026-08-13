@@ -1,0 +1,55 @@
+{
+  "slug": "guides",
+  "title": {
+    "en": "Guides",
+    "fr": "Guides"
+  },
+  "intro": {
+    "en": "Sizing, care, and the things nobody explains about handball kit.",
+    "fr": "Tailles, entretien, et ce que personne n'explique sur l'équipement de handball."
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "Sizing",
+        "fr": "Tailles"
+      },
+      "body": {
+        "en": [
+          "Everything is unisex and cut boxy. Take a shirt you already like, lay it flat, measure pit-to-pit, and match that number against the chart on the product page. That's more reliable than guessing from your usual size, because 'medium' means something different in every brand."
+        ],
+        "fr": [
+          "Tout est unisexe et de coupe ample. Prenez un chandail que vous aimez déjà, posez-le à plat, mesurez d'une aisselle à l'autre, et comparez ce chiffre au tableau de la fiche produit. C'est plus fiable que de deviner à partir de votre taille habituelle, car « medium » ne veut pas dire la même chose d'une marque à l'autre."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Washing a printed garment",
+        "fr": "Laver un vêtement imprimé"
+      },
+      "body": {
+        "en": [
+          "Inside out, cold water, low heat or hang dry. Heat is what kills prints — a hot dryer will crack a print that would otherwise outlast the shirt. Don't iron the print directly; if you must, iron inside out."
+        ],
+        "fr": [
+          "À l'envers, à l'eau froide, séchage à basse température ou à l'air libre. La chaleur est ce qui détruit les impressions : une sécheuse chaude fera craquer une impression qui aurait autrement survécu au chandail. Ne repassez pas directement l'impression; au besoin, repassez à l'envers."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "More guides coming",
+        "fr": "D'autres guides à venir"
+      },
+      "body": {
+        "en": [
+          "Ball sizes by age and gender, indoor shoe fit, resin rules and what to do when your gym bans it, and how to lay out a beach court. No site in this country covers any of it properly, which is exactly why it's on the list."
+        ],
+        "fr": [
+          "Tailles de ballons selon l'âge et le genre, ajustement des chaussures de salle, règles sur la résine et quoi faire quand votre gymnase l'interdit, et comment tracer un terrain de plage. Aucun site au pays ne traite correctement de tout cela, et c'est précisément pourquoi c'est sur la liste."
+        ]
+      }
+    }
+  ]
+}

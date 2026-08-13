@@ -1,0 +1,43 @@
+{
+  "slug": "warranty",
+  "title": {
+    "en": "Warranty",
+    "fr": "Garantie"
+  },
+  "intro": {
+    "en": "What we stand behind, and for how long.",
+    "fr": "Ce que nous garantissons, et pour combien de temps."
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "Print quality",
+        "fr": "Qualité d'impression"
+      },
+      "body": {
+        "en": [
+          "We guarantee the print against cracking, peeling or significant fading for one year from delivery, provided it's been washed as directed. If it fails, we reprint it free.",
+          "Wash inside out, cold, and tumble dry low or hang dry. Don't iron directly on the print. Almost every print failure we've seen traces back to a hot dryer."
+        ],
+        "fr": [
+          "Nous garantissons l'impression contre le craquèlement, le décollement ou une décoloration importante pendant un an à compter de la livraison, à condition qu'elle ait été lavée selon les instructions. En cas de défaillance, nous réimprimons gratuitement.",
+          "Lavez à l'envers, à l'eau froide, et séchez à basse température ou à l'air libre. Ne repassez pas directement sur l'impression. Presque toutes les défaillances que nous avons vues remontent à une sécheuse trop chaude."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Garment",
+        "fr": "Vêtement"
+      },
+      "body": {
+        "en": [
+          "Seams and construction are covered for one year against manufacturing defects. Normal wear, shrinkage from hot washing, and damage from use are not covered."
+        ],
+        "fr": [
+          "Les coutures et la confection sont couvertes pendant un an contre les défauts de fabrication. L'usure normale, le rétrécissement causé par un lavage à chaud et les dommages liés à l'usage ne sont pas couverts."
+        ]
+      }
+    }
+  ]
+}

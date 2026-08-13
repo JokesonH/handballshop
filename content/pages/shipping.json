@@ -1,0 +1,59 @@
+{
+  "slug": "shipping",
+  "title": {
+    "en": "Shipping",
+    "fr": "Livraison"
+  },
+  "intro": {
+    "en": "Printed on demand, then shipped. Here's what that means for timing.",
+    "fr": "Imprimé sur demande, puis expédié. Voici ce que cela implique pour les délais."
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "Production time",
+        "fr": "Délai de production"
+      },
+      "body": {
+        "en": [
+          "Every item is made after you order it. Production takes 5–9 business days before the parcel is handed to the carrier. That's the honest cost of holding no inventory."
+        ],
+        "fr": [
+          "Chaque article est fabriqué après votre commande. La production prend de 5 à 9 jours ouvrables avant la remise du colis au transporteur. C'est le coût honnête de ne garder aucun stock."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Transit",
+        "fr": "Transport"
+      },
+      "body": {
+        "en": [
+          "Canada: typically 2–8 business days after production, depending on province and how rural the address is.",
+          "United States: typically 3–10 business days after production.",
+          "Tracking is emailed as soon as the label is created."
+        ],
+        "fr": [
+          "Canada : généralement de 2 à 8 jours ouvrables après la production, selon la province et l'éloignement de l'adresse.",
+          "États-Unis : généralement de 3 à 10 jours ouvrables après la production.",
+          "Le suivi est envoyé par courriel dès la création de l'étiquette."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Duties and taxes",
+        "fr": "Droits et taxes"
+      },
+      "body": {
+        "en": [
+          "Applicable sales tax is calculated at checkout. Orders shipped outside the country of production may attract import duties charged by the destination country — those are the recipient's responsibility and are not collected by us."
+        ],
+        "fr": [
+          "Les taxes de vente applicables sont calculées au paiement. Les commandes expédiées à l'extérieur du pays de production peuvent être soumises à des droits d'importation facturés par le pays de destination : ils relèvent du destinataire et ne sont pas perçus par nous."
+        ]
+      }
+    }
+  ]
+}

@@ -66,6 +66,13 @@ export type Collection = {
   intro: Localized;
 };
 
+export type ContentPage = {
+  slug: string;
+  title: Localized;
+  intro: Localized;
+  sections: { heading: Localized; body: Localized<string[]> }[];
+};
+
 export type Category = {
   slug: string;
   order: number;
@@ -123,6 +130,11 @@ export function getCategories(): Category[] {
   return readJson<Category[]>("categories.json").sort(
     (a, b) => a.order - b.order
   );
+}
+
+/** Static prose pages — about, contact, policies, guides. */
+export function getPage(slug: string): ContentPage {
+  return readJson<ContentPage>(`pages/${slug}.json`);
 }
 
 export function getCollections(): Collection[] {

@@ -1,0 +1,41 @@
+{
+  "slug": "contact",
+  "title": {
+    "en": "Contact",
+    "fr": "Nous joindre"
+  },
+  "intro": {
+    "en": "Questions about an order, a club enquiry, or a design — this is the place.",
+    "fr": "Questions sur une commande, une demande de club ou un design — c'est ici."
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "Orders and general questions",
+        "fr": "Commandes et questions générales"
+      },
+      "body": {
+        "en": [
+          "Email is the fastest route and we answer within two business days. If your question is about an existing order, include the order number."
+        ],
+        "fr": [
+          "Le courriel est le moyen le plus rapide et nous répondons en moins de deux jours ouvrables. Pour une commande existante, indiquez le numéro de commande."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Clubs and teams",
+        "fr": "Clubs et équipes"
+      },
+      "body": {
+        "en": [
+          "Bulk orders, club storefronts and custom pieces go through the club enquiry form rather than general email — it collects the sizing and quantity detail we'd otherwise have to ask for."
+        ],
+        "fr": [
+          "Les commandes en gros, les boutiques de club et les pièces personnalisées passent par le formulaire de demande de club plutôt que par le courriel général : il recueille les tailles et quantités que nous devrions autrement demander."
+        ]
+      }
+    }
+  ]
+}

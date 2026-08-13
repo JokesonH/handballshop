@@ -1,0 +1,59 @@
+{
+  "slug": "about",
+  "title": {
+    "en": "About",
+    "fr": "À propos"
+  },
+  "intro": {
+    "en": "An independent apparel label for handball in North America.",
+    "fr": "Une marque de vêtements indépendante pour le handball en Amérique du Nord."
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "The gap",
+        "fr": "Le vide"
+      },
+      "body": {
+        "en": [
+          "Walk into any sporting goods store on this continent and you'll find hockey, basketball, soccer, running, and a wall of gym wear. You won't find handball. Not a shirt, not a hoodie, not a sticker.",
+          "The sport is played here — in school gyms, on beaches, at clubs held together by volunteers — and none of it is visible. So we specified it ourselves."
+        ],
+        "fr": [
+          "Entrez dans n'importe quel magasin d'articles de sport sur ce continent et vous trouverez du hockey, du basketball, du soccer, de la course, et un mur de vêtements d'entraînement. Vous ne trouverez pas de handball. Pas un chandail, pas un kangourou, pas un autocollant.",
+          "Le sport se joue ici — dans les gymnases d'école, sur les plages, dans des clubs tenus à bout de bras par des bénévoles — et rien de tout cela n'est visible. Nous l'avons donc conçu nous-mêmes."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "How we make things",
+        "fr": "Comment nous produisons"
+      },
+      "body": {
+        "en": [
+          "Everything is printed on demand. Nothing is held in stock, nothing is overproduced, and nothing ends up in a landfill at the end of a season. The trade-off is honest: orders take 5–9 business days instead of shipping the same afternoon.",
+          "Designs are drawn in-house. The City Series pieces are about specific places and specific clubs, and they're meant to be largely illegible to anyone outside the sport."
+        ],
+        "fr": [
+          "Tout est imprimé sur demande. Rien n'est gardé en stock, rien n'est surproduit, et rien ne finit à l'enfouissement en fin de saison. Le compromis est honnête : les commandes prennent de 5 à 9 jours ouvrables au lieu d'être expédiées l'après-midi même.",
+          "Les designs sont réalisés à l'interne. Les pièces de la Série des villes parlent de lieux et de clubs précis, et sont volontairement peu déchiffrables pour qui ne pratique pas le sport."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Independence",
+        "fr": "Indépendance"
+      },
+      "body": {
+        "en": [
+          "We are not affiliated with, endorsed by, or acting on behalf of Handball Canada, USA Team Handball, or any provincial or state federation. Where a design references a club, it is used with that club's permission or it is not published."
+        ],
+        "fr": [
+          "Nous ne sommes ni affiliés à Handball Canada, à USA Team Handball ou à une fédération provinciale ou d'État, ni approuvés ou mandatés par elles. Lorsqu'un design fait référence à un club, il est utilisé avec la permission de ce club, sinon il n'est pas publié."
+        ]
+      }
+    }
+  ]
+}

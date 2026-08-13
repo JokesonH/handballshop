@@ -1,0 +1,57 @@
+{
+  "slug": "privacy",
+  "title": {
+    "en": "Privacy",
+    "fr": "Confidentialité"
+  },
+  "intro": {
+    "en": "What we collect, why, and how to get rid of it.",
+    "fr": "Ce que nous recueillons, pourquoi, et comment le faire supprimer."
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "What we collect",
+        "fr": "Ce que nous recueillons"
+      },
+      "body": {
+        "en": [
+          "When you place an order: your name, email, shipping address and the contents of the order. When you submit a form: whatever you type into it. Payment card details are handled by our payment processor and never reach our servers.",
+          "We do not sell, rent or trade personal information to anyone."
+        ],
+        "fr": [
+          "Lorsque vous passez une commande : votre nom, votre courriel, votre adresse de livraison et le contenu de la commande. Lorsque vous soumettez un formulaire : ce que vous y inscrivez. Les données de carte de paiement sont traitées par notre processeur de paiement et n'atteignent jamais nos serveurs.",
+          "Nous ne vendons, ne louons ni n'échangeons de renseignements personnels."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Email",
+        "fr": "Courriel"
+      },
+      "body": {
+        "en": [
+          "We only send marketing email to people who asked for it, every message has a working unsubscribe link, and unsubscribing takes effect immediately. This is a CASL requirement and we treat it as one."
+        ],
+        "fr": [
+          "Nous n'envoyons des courriels promotionnels qu'aux personnes qui l'ont demandé, chaque message comporte un lien de désabonnement fonctionnel, et le désabonnement prend effet immédiatement. Il s'agit d'une exigence de la LCAP et nous la traitons comme telle."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Your rights",
+        "fr": "Vos droits"
+      },
+      "body": {
+        "en": [
+          "You can ask what we hold about you, ask us to correct it, or ask us to delete it. Write to the contact address and we'll respond within 30 days, as PIPEDA requires."
+        ],
+        "fr": [
+          "Vous pouvez demander ce que nous détenons à votre sujet, en demander la correction ou la suppression. Écrivez à l'adresse de contact et nous répondrons dans les 30 jours, comme l'exige la LPRPDE."
+        ]
+      }
+    }
+  ]
+}

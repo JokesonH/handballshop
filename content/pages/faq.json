@@ -1,0 +1,83 @@
+{
+  "slug": "faq",
+  "title": {
+    "en": "FAQ",
+    "fr": "FAQ"
+  },
+  "intro": {
+    "en": "The questions we actually get.",
+    "fr": "Les questions que nous recevons vraiment."
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "How do the sizes run?",
+        "fr": "Comment taillent les vêtements ?"
+      },
+      "body": {
+        "en": [
+          "Unisex and cut boxy. If you're between sizes or want the oversized look the pieces are designed for, size up. Measurements are on each product page."
+        ],
+        "fr": [
+          "Coupe unisexe et ample. Entre deux tailles, ou si vous voulez le tombé oversize pour lequel les pièces sont conçues, prenez la plus grande. Les mesures figurent sur chaque fiche produit."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Why does it take 5–9 days to ship?",
+        "fr": "Pourquoi l'expédition prend-elle de 5 à 9 jours ?"
+      },
+      "body": {
+        "en": [
+          "Because it doesn't exist until you order it. We hold no inventory, so nothing is overproduced and nothing is discarded at the end of a season. The wait is the trade-off."
+        ],
+        "fr": [
+          "Parce qu'il n'existe pas avant votre commande. Nous ne gardons aucun stock : rien n'est surproduit et rien n'est jeté en fin de saison. L'attente est le compromis."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Do you ship to the United States?",
+        "fr": "Livrez-vous aux États-Unis ?"
+      },
+      "body": {
+        "en": [
+          "Yes. See the shipping page for timing and duties."
+        ],
+        "fr": [
+          "Oui. Consultez la page Livraison pour les délais et les droits."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Can my club get its own design?",
+        "fr": "Mon club peut-il avoir son propre design ?"
+      },
+      "body": {
+        "en": [
+          "That's the plan. The City Series is built around clubs and cities, and we'd rather build a piece with a club than about one. Use the club enquiry form and tell us who you are."
+        ],
+        "fr": [
+          "C'est le plan. La Série des villes est bâtie autour des clubs et des villes, et nous préférons concevoir une pièce avec un club plutôt qu'à son sujet. Utilisez le formulaire de demande de club et présentez-vous."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Are you the national federation?",
+        "fr": "Êtes-vous la fédération nationale ?"
+      },
+      "body": {
+        "en": [
+          "No. We're an independent label with no affiliation to Handball Canada, USA Team Handball, or any provincial or state federation."
+        ],
+        "fr": [
+          "Non. Nous sommes une marque indépendante sans aucune affiliation à Handball Canada, à USA Team Handball ou à une fédération provinciale ou d'État."
+        ]
+      }
+    }
+  ]
+}

@@ -59,3 +59,39 @@ with explicit `srcset`. Don't make that change casually.
 - **Don't upload SVG** through the CMS media library. Next's optimizer passes
   SVG through unoptimized and it's an XSS vector when the file is
   user-supplied; the print artwork in `design/` is for printers, not the site.
+
+## Keeping the repo from bloating
+
+`next/image` fixes *delivery*, not *storage*. The master in `public/uploads` is
+committed to git, and the CMS commits whatever the editor dragged in — a few
+6000px mockup exports will bloat the history permanently, and git history is
+the one thing that isn't cheap to clean up later. The first three uploads were
+37 MB between them before being downscaled to 7.8 MB.
+
+So there's a guard:
+
+```bash
+npm run optimize:uploads -- --dry   # report what's oversized
+npm run optimize:uploads            # downscale in place
+```
+
+It caps the long edge at 2000px. Nothing wider than 1920 is ever requested
+(see `deviceSizes`), so 2000 keeps a little headroom for re-cropping and
+discards the rest. Run it after a batch of CMS uploads and commit the result.
+
+**Upload guidance for editors:** 2000px on the long edge is plenty. If your
+mockup tool exports at 6000px, downscale before uploading or run the script
+afterwards — either is fine, but don't leave it.
+
+## Image conventions
+
+Product images are ordered, and the order means something:
+
+| Slot | What it is | Where it shows |
+|---|---|---|
+| `images[0]` | Hanging product shot | Product page hero (first carousel frame) |
+| `images[1]` | The design itself | **Grid cards** — the design reads better at thumbnail size |
+| `images[2+]` | Detail, alternate colourway, on-body | Carousel + thumbnails |
+
+`ProductCard` deliberately prefers `images[1]` and falls back to `images[0]`,
+so a product with only one image still works.

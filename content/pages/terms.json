@@ -1,0 +1,71 @@
+{
+  "slug": "terms",
+  "title": {
+    "en": "Terms",
+    "fr": "Conditions"
+  },
+  "intro": {
+    "en": "The terms that apply when you buy something here.",
+    "fr": "Les conditions applicables à tout achat effectué ici."
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "Orders",
+        "fr": "Commandes"
+      },
+      "body": {
+        "en": [
+          "An order is an offer to buy. It's accepted when we confirm it by email. Because items are made to order, an order can only be changed or cancelled before production starts — usually a few hours.",
+          "Prices are shown in the currency indicated at checkout and may change without notice, but never after an order is confirmed."
+        ],
+        "fr": [
+          "Une commande constitue une offre d'achat. Elle est acceptée lorsque nous la confirmons par courriel. Les articles étant fabriqués sur commande, une commande ne peut être modifiée ou annulée qu'avant le début de la production — généralement quelques heures.",
+          "Les prix sont affichés dans la devise indiquée au paiement et peuvent changer sans préavis, mais jamais après la confirmation d'une commande."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Colour and finish",
+        "fr": "Couleur et finition"
+      },
+      "body": {
+        "en": [
+          "Screens differ. Printed colour can vary slightly from what you see, and garment colour can vary between production batches. Meaningful variation is covered by the returns policy; a small shift in shade is not a defect."
+        ],
+        "fr": [
+          "Les écrans diffèrent. La couleur imprimée peut varier légèrement de ce que vous voyez, et la couleur du vêtement peut varier d'un lot de production à l'autre. Une variation importante est couverte par la politique de retour; une légère différence de teinte n'est pas un défaut."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Intellectual property",
+        "fr": "Propriété intellectuelle"
+      },
+      "body": {
+        "en": [
+          "Designs, artwork and site content belong to us and may not be reproduced commercially without written permission. Where a design references a club, city or event, that reference is used with permission or on terms that require none."
+        ],
+        "fr": [
+          "Les designs, les illustrations et le contenu du site nous appartiennent et ne peuvent être reproduits à des fins commerciales sans autorisation écrite. Lorsqu'un design fait référence à un club, une ville ou un événement, cette référence est utilisée avec permission ou selon des modalités qui n'en exigent aucune."
+        ]
+      }
+    },
+    {
+      "heading": {
+        "en": "Governing law",
+        "fr": "Droit applicable"
+      },
+      "body": {
+        "en": [
+          "These terms are governed by the laws of the province in which we operate. Nothing here limits rights you have under applicable consumer protection law."
+        ],
+        "fr": [
+          "Les présentes conditions sont régies par les lois de la province où nous exerçons nos activités. Rien ici ne limite les droits que vous confère la législation applicable en matière de protection du consommateur."
+        ]
+      }
+    }
+  ]
+}

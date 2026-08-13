@@ -21,7 +21,10 @@ function statusLabel(product: Product, dict: Dictionary): string {
 export default function ProductCard({ product, dict, locale }: Props) {
   const price = formatPrice(product.price, locale);
   const href = productHref(product, locale);
-  const image = product.images?.[0];
+  /* Convention: images[0] is the hanging product shot, images[1] is the
+     design itself. The design reads far better at grid scale, so prefer it
+     here and keep the hanging shot for the product page hero. */
+  const image = product.images?.[1] ?? product.images?.[0];
   const isFreight = product.fulfillment === "freight";
 
   return (

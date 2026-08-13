@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import BuyPanel from "@/components/BuyPanel";
+import ProductGallery from "@/components/ProductGallery";
 import { partCode, type Product, type SiteConfig } from "@/lib/catalog";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/locales";
@@ -27,7 +27,6 @@ export default function ProductDetail({
   dict,
   locale,
 }: Props) {
-  const image = product.images?.[0];
 
   return (
     <div className="mx-auto max-w-[1400px] px-4 py-10">
@@ -44,39 +43,13 @@ export default function ProductDetail({
 
       <div className="mt-8 grid gap-10 lg:grid-cols-2">
         {/* Gallery */}
-        <div>
-          <div className="relative aspect-square overflow-hidden plate">
-            {image ? (
-              <Image
-                src={image}
-                alt={product.name[locale]}
-                fill
-                priority
-                sizes="(min-width: 1024px) 46vw, 94vw"
-                className="object-cover"
-              />
-            ) : (
-              /* Branded placeholder — real photography drops in later. */
-              <div className="flex h-full w-full items-center justify-center bg-[repeating-linear-gradient(45deg,var(--color-bone-dim)_0_12px,var(--color-bone)_12px_24px)]">
-                <span className="code border border-ink bg-bone px-3 py-1.5 text-graphite">
-                  FIG. PENDING
-                </span>
-              </div>
-            )}
-          </div>
-          {product.images && product.images.length > 1 && (
-            <div className="mt-3 grid grid-cols-4 gap-3">
-              {product.images.slice(1, 5).map((src) => (
-                <div
-                  key={src}
-                  className="relative aspect-square w-full border border-rule"
-                >
-                  <Image src={src} alt="" fill sizes="128px" className="object-cover" />
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+        <ProductGallery
+          images={product.images ?? []}
+          alt={product.name[locale]}
+          pendingLabel={dict.catalog.imagePending}
+          prevLabel={dict.catalog.prevImage}
+          nextLabel={dict.catalog.nextImage}
+        />
 
         {/* Detail */}
         <div>

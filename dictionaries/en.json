@@ -51,7 +51,10 @@
     "clearFilters": "Clear filters",
     "sizeGuide": "Size guide",
     "specs": "Details",
-    "backTo": "Back to"
+    "backTo": "Back to",
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
+    "imagePending": "FIG. PENDING"
   },
   "status": {
     "available": "In stock",
