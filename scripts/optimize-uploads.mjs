@@ -32,16 +32,44 @@ for (const name of await readdir(DIR)) {
   const before = (await stat(file)).size;
   const image = sharp(file, { limitInputPixels: false });
   const { width = 0, height = 0, hasAlpha } = await image.metadata();
-  if (Math.max(width, height) <= MAX_EDGE) {
+
+  /* An alpha *channel* is not the same as alpha being *used*. Mockup
+     exporters routinely emit RGBA where every pixel is opaque, or nearly so
+     (min 250 is compression noise on a hard edge, not a cutout). Keeping a
+     dead channel blocks palette quantisation and roughly doubles the file,
+     so decide from the actual data. */
+  let keepAlpha = false;
+  if (hasAlpha) {
+    const { channels } = await image.stats();
+    const alpha = channels[channels.length - 1];
+    keepAlpha = alpha.min < 250;
+  }
+
+  const oversized = Math.max(width, height) > MAX_EDGE;
+  const wastefulAlpha = hasAlpha && !keepAlpha;
+  if (!oversized && !wastefulAlpha) {
     console.log(`  keep    ${name}  ${width}x${height}  ${mb(before)}`);
     continue;
   }
-  const out = await image
-    .resize({ width: MAX_EDGE, height: MAX_EDGE, fit: "inside", withoutEnlargement: true })
-    .png({ compressionLevel: 9, palette: !hasAlpha })
+
+  let pipeline = image;
+  if (oversized) {
+    pipeline = pipeline.resize({
+      width: MAX_EDGE,
+      height: MAX_EDGE,
+      fit: "inside",
+      withoutEnlargement: true,
+    });
+  }
+  if (!keepAlpha) pipeline = pipeline.flatten({ background: "#ffffff" });
+  const out = await pipeline
+    .png({ compressionLevel: 9, palette: !keepAlpha })
     .toBuffer();
+  const why = [oversized && "oversized", wastefulAlpha && "dead alpha"]
+    .filter(Boolean)
+    .join(" + ");
   console.log(
-    `  ${dry ? "would " : ""}shrink ${name}  ${width}x${height} ${mb(before)} -> ${mb(out.length)}`
+    `  ${dry ? "would " : ""}fix    ${name}  ${width}x${height} ${mb(before)} -> ${mb(out.length)}  (${why})`
   );
   saved += before - out.length;
   if (!dry) await writeFile(file, out);
