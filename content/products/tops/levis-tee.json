@@ -1,14 +1,18 @@
 {
-  "slug": "levis-tee",
-  "category": "tops",
-  "subcategory": "tees",
-  "collection": "city-series",
-  "brand": null,
-  "status": "coming-soon",
-  "fulfillment": "pod",
-  "price": null,
-  "featured": false,
   "gender": "unisex",
+  "todo": "Artwork drafted (see design/levis-back.svg). Not released yet: needs a final proof, a wash test and product photography before status flips to available.",
+  "summary": {
+    "en": "City Series tee — L'Autre Rive. Chest mark on the right, full graphic on the back.",
+    "fr": "T-shirt de la Série des villes — L'Autre Rive. Écusson à droite, graphique complet au dos."
+  },
+  "brand": null,
+  "price": null,
+  "name": {
+    "en": "Lévis Tee",
+    "fr": "T-shirt Lévis"
+  },
+  "slug": "levis-tee",
+  "featured": false,
   "sizes": [
     "S",
     "M",
@@ -16,27 +20,7 @@
     "XL",
     "2XL"
   ],
-  "todo": "Artwork drafted (see design/levis-back.svg). Not released yet: needs a final proof, a wash test and product photography before status flips to available.",
-  "name": {
-    "en": "Lévis Tee",
-    "fr": "T-shirt Lévis"
-  },
-  "summary": {
-    "en": "City Series tee — L'Autre Rive. Chest mark on the right, full graphic on the back.",
-    "fr": "T-shirt de la Série des villes — L'Autre Rive. Écusson à droite, graphique complet au dos."
-  },
-  "description": {
-    "en": [
-      "The Québec City skyline seen from the south shore, with the goal on your side of the water.",
-      "Right-chest mark, full back print. Printed on demand and shipped in 5–9 business days — nothing is held in stock.",
-      "Unisex fit. Size up for a looser cut."
-    ],
-    "fr": [
-      "La silhouette de Québec vue de la rive sud, le but de votre côté de l'eau.",
-      "Écusson à la poitrine droite, impression complète au dos. Imprimé sur demande et expédié en 5 à 9 jours ouvrables — rien n'est gardé en stock.",
-      "Coupe unisexe. Prenez une taille au-dessus pour un tombé plus ample."
-    ]
-  },
+  "status": "coming-soon",
   "specs": [
     {
       "label": {
@@ -68,5 +52,25 @@
         "fr": "Impression sur demande"
       }
     }
-  ]
+  ],
+  "images": [
+    "/uploads/levisfront.png",
+    "/uploads/levisback.png"
+  ],
+  "description": {
+    "en": [
+      "The Québec City skyline seen from the south shore, with the goal on your side of the water.",
+      "Right-chest mark, full back print. Printed on demand and shipped in 5–9 business days — nothing is held in stock.",
+      "Unisex fit. Size up for a looser cut."
+    ],
+    "fr": [
+      "La silhouette de Québec vue de la rive sud, le but de votre côté de l'eau.",
+      "Écusson à la poitrine droite, impression complète au dos. Imprimé sur demande et expédié en 5 à 9 jours ouvrables — rien n'est gardé en stock.",
+      "Coupe unisexe. Prenez une taille au-dessus pour un tombé plus ample."
+    ]
+  },
+  "category": "tops",
+  "fulfillment": "pod",
+  "collection": "city-series",
+  "subcategory": "tees"
 }
