@@ -1,18 +1,18 @@
 {
   "gender": "unisex",
-  "todo": "Artwork drafted (see design/levis-back.svg). Not released yet: needs a final proof, a wash test and product photography before status flips to available.",
+  "todo": "Mockups in place and listing live. Still outstanding before a real first order: confirm the Tapstitch base cost against the $45 price, and run a physical proof plus wash test on the print.",
   "summary": {
     "en": "City Series tee — L'Autre Rive. Chest mark on the right, full graphic on the back.",
     "fr": "T-shirt de la Série des villes — L'Autre Rive. Écusson à droite, graphique complet au dos."
   },
   "brand": null,
-  "price": null,
+  "price": 4500,
   "name": {
     "en": "Lévis Tee",
     "fr": "T-shirt Lévis"
   },
   "slug": "levis-tee",
-  "featured": false,
+  "featured": true,
   "sizes": [
     "S",
     "M",
@@ -20,7 +20,7 @@
     "XL",
     "2XL"
   ],
-  "status": "coming-soon",
+  "status": "available",
   "specs": [
     {
       "label": {
