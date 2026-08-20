@@ -82,6 +82,42 @@ which is fine at this size and has real limits worth knowing:
 A real datastore is the fix for all three, and is the natural next step once
 orders are regular.
 
+## The other direction: Gelato telling us things
+
+The flow above is us calling Gelato. Separately, Gelato calls us back as an
+order moves through production — printed, shipped, a tracking code assigned —
+via `app/api/webhooks/gelato/[token]/route.ts`.
+
+**This one has no signature.** Stripe's webhook is verified cryptographically
+against `STRIPE_WEBHOOK_SECRET`; Gelato's webhook system has no signing secret
+and no signature header at all. Anyone who finds the URL could POST a forged
+`order_status_updated` event. The mitigation is the only thing available
+without a signature: a long random token lives in the URL path itself
+(`/api/webhooks/gelato/<token>`), checked with a constant-time comparison so
+timing can't leak a partial match.
+
+**Setup**: generate a token, put it in `GELATO_WEBHOOK_TOKEN`, then register
+the *exact* deployed URL — token included — as the webhook endpoint in the
+Gelato dashboard (API Portal → Webhooks).
+
+```bash
+node -e "console.log(require('crypto').randomUUID()+require('crypto').randomUUID().replace(/-/g,''))"
+```
+
+Treat that URL the way you'd treat a password: anyone who has it can feed
+fake order updates into your logs. It isn't secret in the sense of blocking
+a determined attacker forever, but it stops casual discovery, which is what
+matters for an endpoint like this.
+
+**Right now it only logs.** There's no database (see above), so an incoming
+tracking-code update becomes a `console.log` line in the Vercel log stream,
+not a state change anywhere. That's enough to confirm production is moving,
+but it's the seam to build on next: emailing a customer their tracking number
+needs somewhere to record "already sent" so a retried webhook doesn't send it
+twice. Gelato retries 3 times, 5 seconds apart, on anything but a 2xx
+response — which the route always returns once the token checks out, even for
+an event type it doesn't specifically handle.
+
 ## Testing without spending money
 
 Use Stripe test keys and card `4242 4242 4242 4242`. For the webhook:
