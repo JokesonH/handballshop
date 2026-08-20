@@ -1,0 +1,22 @@
+{
+  "_todo": "FILL uidBySize FROM GELATO'S CATALOG BEFORE TAKING A REAL ORDER. Product UIDs encode garment, cut, size and colour in one string and cannot be guessed — pull them from Gelato's catalog API (GET https://product.gelatoapis.com/v3/catalogs/apparel/products) or copy them out of the dashboard. Orders will be refused at the API boundary while these are null; that is deliberate, see lib/gelato.ts.",
+
+  "garments": {
+    "tee": {
+      "label": "Unisex heavyweight cotton tee",
+      "uidBySize": {
+        "S": null,
+        "M": null,
+        "L": null,
+        "XL": null,
+        "2XL": null
+      }
+    }
+  },
+
+  "_shippingNote": "Flat rates, charged at checkout. Gelato's quote endpoint returns real per-destination rates and is the upgrade path — see docs/commerce.md. Amounts are cents in the store currency.",
+  "shipping": {
+    "CA": { "amountCents": 900, "label": "Canada — 2–8 business days after production" },
+    "US": { "amountCents": 1400, "label": "United States — 3–10 business days after production" }
+  }
+}

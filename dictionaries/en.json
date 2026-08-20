@@ -128,5 +128,21 @@
     "notFoundTitle": "Off the court",
     "notFoundBody": "That page doesn't exist. Try the shop.",
     "notFoundCta": "Back to the shop"
+  },
+  "cart": {
+    "add": "Add to cart",
+    "added": "Added to cart",
+    "chooseSize": "Choose a size",
+    "view": "View cart",
+    "title": "Cart",
+    "empty": "Your cart is empty.",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout",
+    "remove": "Remove",
+    "qty": "Qty",
+    "shippingNote": "Shipping and tax calculated at checkout.",
+    "continue": "Keep shopping",
+    "processing": "Redirecting to checkout…",
+    "error": "Something went wrong. Please try again."
   }
 }

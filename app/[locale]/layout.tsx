@@ -5,6 +5,7 @@ import {
   Spline_Sans_Mono,
 } from "next/font/google";
 import { notFound } from "next/navigation";
+import { CartProvider } from "@/components/CartProvider";
 import Footer from "@/components/Footer";
 import Header, { type NavItem } from "@/components/Header";
 import { categoryCode, getCategories, getSite } from "@/lib/catalog";
@@ -94,6 +95,7 @@ export default async function LocaleLayout({
       className={`${shoulders.variable} ${spline.variable} ${splineMono.variable}`}
     >
       <body>
+        <CartProvider>
         <Header
           locale={typed}
           brandName={site.brandName}
@@ -114,6 +116,7 @@ export default async function LocaleLayout({
           site={site}
           categories={categories}
         />
+        </CartProvider>
       </body>
     </html>
   );

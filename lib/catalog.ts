@@ -46,6 +46,17 @@ export type Product = {
    * modelled as categories without duplicating the taxonomy.
    */
   collection?: string;
+  /**
+   * Which entry in content/gelato.json garments this product is printed on.
+   * Defaults to "tee" when absent.
+   */
+  gelatoGarment?: string;
+  /**
+   * Public path to the print-ready raster Gelato will fetch, e.g.
+   * "/print/edmonton-back.png". Must be reachable over HTTP — Gelato pulls
+   * it at production time, it is not uploaded.
+   */
+  printFile?: string;
   name: Localized;
   summary: Localized;
   description: Localized<string[]>;

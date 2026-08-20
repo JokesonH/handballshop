@@ -1,3 +1,4 @@
+import AddToCart from "@/components/AddToCart";
 import LeadForm from "@/components/LeadForm";
 import type { Product, SiteConfig } from "@/lib/catalog";
 import { formatPrice } from "@/lib/format";
@@ -125,31 +126,18 @@ export default function BuyPanel({ product, site, dict, locale }: Props) {
           </>
         )}
 
-        {/*
-          Shopify Buy Button mounts here once site.merch.shopifyDomain and
-          storefrontToken are set. Until then this renders an honest
-          placeholder rather than a dead "Add to cart" button.
-
-          Wiring it up (Phase 3):
-            1. Shopify Basic + Tapstitch app, publish the merch products
-            2. Enable the Buy Button channel, copy domain + storefront token
-            3. Fill both values in content/site.json → merch
-            4. Replace this block with the embed, client-side only
-        */}
-        <div className="mt-5">
-          {site.merch.shopifyDomain && site.merch.storefrontToken ? (
-            <div
-              id={`buy-${product.slug}`}
-              data-product-slug={product.slug}
-              className="min-h-12"
-            />
-          ) : (
-            <p className="code-sm border border-dashed border-graphite px-4 py-3 text-graphite">
-              CHECKOUT NOT CONNECTED — SET merch.shopifyDomain +
-              merch.storefrontToken
-            </p>
-          )}
-        </div>
+        <AddToCart
+          slug={product.slug}
+          sizes={product.sizes ?? []}
+          cartHref={`/${locale}/cart`}
+          labels={{
+            size: dict.catalog.size,
+            add: dict.cart.add,
+            added: dict.cart.added,
+            chooseSize: dict.cart.chooseSize,
+            viewCart: dict.cart.view,
+          }}
+        />
       </div>
     </div>
   );

@@ -128,5 +128,21 @@
     "notFoundTitle": "Hors du terrain",
     "notFoundBody": "Cette page n'existe pas. Essayez la boutique.",
     "notFoundCta": "Retour à la boutique"
+  },
+  "cart": {
+    "add": "Ajouter au panier",
+    "added": "Ajouté au panier",
+    "chooseSize": "Choisissez une taille",
+    "view": "Voir le panier",
+    "title": "Panier",
+    "empty": "Votre panier est vide.",
+    "subtotal": "Sous-total",
+    "checkout": "Passer à la caisse",
+    "remove": "Retirer",
+    "qty": "Qté",
+    "shippingNote": "Livraison et taxes calculées à la caisse.",
+    "continue": "Continuer vos achats",
+    "processing": "Redirection vers la caisse…",
+    "error": "Une erreur est survenue. Veuillez réessayer."
   }
 }
