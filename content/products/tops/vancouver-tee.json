@@ -76,6 +76,8 @@
   "gelatoGarment": "tee",
   "printFiles": {
     "front": "/print/vancouver-chest.png",
-    "back": "/print/vancouver-back.png"
+    "back": "/print/vancouver-back.png",
+    "sleeve-left": "/print/vancouver-sleeve-left.png",
+    "sleeve-right": "/print/vancouver-sleeve-right.png"
   }
 }

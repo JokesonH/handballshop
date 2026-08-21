@@ -76,6 +76,8 @@
   "gelatoGarment": "tee",
   "printFiles": {
     "front": "/print/celtique-chest.png",
-    "back": "/print/celtique-back.png"
+    "back": "/print/celtique-back.png",
+    "sleeve-left": "/print/celtique-sleeve-left.png",
+    "sleeve-right": "/print/celtique-sleeve-right.png"
   }
 }

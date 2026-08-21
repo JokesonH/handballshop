@@ -76,6 +76,8 @@
   "gelatoGarment": "tee",
   "printFiles": {
     "front": "/print/rosemont-chest.png",
-    "back": "/print/rosemont-back.png"
+    "back": "/print/rosemont-back.png",
+    "sleeve-left": "/print/rosemont-sleeve-left.png",
+    "sleeve-right": "/print/rosemont-sleeve-right.png"
   }
 }

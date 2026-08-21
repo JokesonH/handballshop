@@ -76,6 +76,8 @@
   "gelatoGarment": "tee",
   "printFiles": {
     "front": "/print/champlain-chest.png",
-    "back": "/print/champlain-back.png"
+    "back": "/print/champlain-back.png",
+    "sleeve-left": "/print/champlain-sleeve-left.png",
+    "sleeve-right": "/print/champlain-sleeve-right.png"
   }
 }

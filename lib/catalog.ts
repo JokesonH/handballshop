@@ -53,12 +53,15 @@ export type Product = {
   gelatoGarment?: string;
   /**
    * Public paths to the print-ready rasters Gelato will fetch, keyed by
-   * print area — e.g. { back: "/print/edmonton-back.png", front:
-   * "/print/edmonton-chest.png" }. The keys must exactly match the print
-   * area names Gelato's own product builder uses for this garment (visible
-   * once a product is set up in the Gelato dashboard); they're sent through
-   * unchanged as each file's "type" in the order payload. Must be reachable
-   * over HTTP — Gelato pulls them at production time, they are not uploaded.
+   * print area — e.g. { front: "/print/edmonton-chest.png", back:
+   * "/print/edmonton-back.png", "sleeve-left": "/print/edmonton-sleeve-left.png",
+   * "sleeve-right": "/print/edmonton-sleeve-right.png" }. Four locations per
+   * shirt, sleeves carrying unique art each (not a mirrored pair). The keys
+   * must exactly match the print area names Gelato's own product builder
+   * uses for this garment (visible once a product is set up in the Gelato
+   * dashboard); they're sent through unchanged as each file's "type" in the
+   * order payload. Must be reachable over HTTP — Gelato pulls them at
+   * production time, they are not uploaded.
    */
   printFiles?: Record<string, string>;
   name: Localized;

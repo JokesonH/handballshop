@@ -76,6 +76,8 @@
   "gelatoGarment": "tee",
   "printFiles": {
     "front": "/print/saskatchewan-chest.png",
-    "back": "/print/saskatchewan-back.png"
+    "back": "/print/saskatchewan-back.png",
+    "sleeve-left": "/print/saskatchewan-sleeve-left.png",
+    "sleeve-right": "/print/saskatchewan-sleeve-right.png"
   }
 }

@@ -76,6 +76,8 @@
   "gelatoGarment": "tee",
   "printFiles": {
     "front": "/print/edmonton-chest.png",
-    "back": "/print/edmonton-back.png"
+    "back": "/print/edmonton-back.png",
+    "sleeve-left": "/print/edmonton-sleeve-left.png",
+    "sleeve-right": "/print/edmonton-sleeve-right.png"
   }
 }

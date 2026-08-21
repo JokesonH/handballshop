@@ -76,6 +76,8 @@
   "gelatoGarment": "tee",
   "printFiles": {
     "front": "/print/toronto-chest.png",
-    "back": "/print/toronto-back.png"
+    "back": "/print/toronto-back.png",
+    "sleeve-left": "/print/toronto-sleeve-left.png",
+    "sleeve-right": "/print/toronto-sleeve-right.png"
   }
 }
