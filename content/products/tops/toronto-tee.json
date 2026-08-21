@@ -72,5 +72,7 @@
   "category": "tops",
   "fulfillment": "pod",
   "collection": "city-series",
-  "subcategory": "tees"
+  "subcategory": "tees",
+  "printFile": "/print/toronto-back.png",
+  "gelatoGarment": "tee"
 }

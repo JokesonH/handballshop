@@ -79,9 +79,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ url: session.url });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Checkout failed";
-    // CartError is the customer's problem (bad line); anything else is ours.
+    // CartError means we're refusing to charge for something we can't
+    // produce or sell — a missing Gelato UID, a missing print file, a
+    // product that's not actually for sale. That's not a 500, but it must
+    // never be silent: it's the exact class of "checkout is broken and
+    // nobody noticed" bug, so it's logged the same as an unexpected error.
     const status = error instanceof CartError ? 400 : 500;
-    if (status === 500) console.error("[checkout]", error);
+    console.error(`[checkout] ${status}`, message);
     return NextResponse.json({ error: message }, { status });
   }
 }
