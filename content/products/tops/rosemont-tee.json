@@ -73,6 +73,9 @@
   "fulfillment": "pod",
   "collection": "city-series",
   "subcategory": "tees",
-  "printFile": "/print/rosemont-back.png",
-  "gelatoGarment": "tee"
+  "gelatoGarment": "tee",
+  "printFiles": {
+    "front": "/print/rosemont-chest.png",
+    "back": "/print/rosemont-back.png"
+  }
 }

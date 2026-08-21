@@ -73,6 +73,9 @@
   "fulfillment": "pod",
   "collection": "city-series",
   "subcategory": "tees",
-  "printFile": "/print/celtique-back.png",
-  "gelatoGarment": "tee"
+  "gelatoGarment": "tee",
+  "printFiles": {
+    "front": "/print/celtique-chest.png",
+    "back": "/print/celtique-back.png"
+  }
 }

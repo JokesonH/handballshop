@@ -34,8 +34,8 @@ export async function POST(request: NextRequest) {
     // Fail loudly now if we can't actually produce any line.
     for (const line of cart.lines) {
       resolveProductUid(line.product.gelatoGarment ?? "tee", line.size);
-      if (!line.product.printFile) {
-        throw new CartError(`${line.product.slug} has no print file configured`);
+      if (!line.product.printFiles || Object.keys(line.product.printFiles).length === 0) {
+        throw new CartError(`${line.product.slug} has no print files configured`);
       }
     }
 

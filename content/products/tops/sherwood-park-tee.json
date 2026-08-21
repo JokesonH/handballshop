@@ -73,6 +73,9 @@
   "fulfillment": "pod",
   "collection": "city-series",
   "subcategory": "tees",
-  "printFile": "/print/sherwood-park-back.png",
-  "gelatoGarment": "tee"
+  "gelatoGarment": "tee",
+  "printFiles": {
+    "front": "/print/sherwood-park-chest.png",
+    "back": "/print/sherwood-park-back.png"
+  }
 }

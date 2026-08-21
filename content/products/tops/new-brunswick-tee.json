@@ -73,6 +73,9 @@
   "fulfillment": "pod",
   "collection": "city-series",
   "subcategory": "tees",
-  "printFile": "/print/new-brunswick-back.png",
-  "gelatoGarment": "tee"
+  "gelatoGarment": "tee",
+  "printFiles": {
+    "front": "/print/new-brunswick-chest.png",
+    "back": "/print/new-brunswick-back.png"
+  }
 }

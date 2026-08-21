@@ -73,6 +73,9 @@
   "fulfillment": "pod",
   "collection": "city-series",
   "subcategory": "tees",
-  "printFile": "/print/vancouver-back.png",
-  "gelatoGarment": "tee"
+  "gelatoGarment": "tee",
+  "printFiles": {
+    "front": "/print/vancouver-chest.png",
+    "back": "/print/vancouver-back.png"
+  }
 }

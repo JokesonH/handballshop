@@ -52,7 +52,9 @@ export type GelatoOrderItem = {
   itemReferenceId: string;
   productUid: string;
   quantity: number;
-  files: { type: "default"; url: string }[];
+  // "type" is the Gelato print-area name for this garment (e.g. "front",
+  // "back") — whatever the product's own placeholders are called.
+  files: { type: string; url: string }[];
 };
 
 export type GelatoAddress = {

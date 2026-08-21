@@ -73,12 +73,28 @@ export async function POST(request: NextRequest) {
     const cart = resolveCart(decodeCart(encoded));
     const origin = request.nextUrl.origin;
 
-    const items: GelatoOrderItem[] = cart.lines.map((line, i) => ({
-      itemReferenceId: `${session.id}-${i}`,
-      productUid: resolveProductUid(line.product.gelatoGarment ?? "tee", line.size),
-      quantity: line.qty,
-      files: [{ type: "default", url: `${origin}${line.product.printFile}` }],
-    }));
+    const items: GelatoOrderItem[] = cart.lines.map((line, i) => {
+      const printFiles = line.product.printFiles ?? {};
+      const areas = Object.keys(printFiles);
+      if (areas.length === 0) {
+        // Belt and suspenders: checkout already refuses this case, but the
+        // webhook must never send Gelato a request with zero files rather
+        // than fail loudly — that would produce a blank shirt, charged.
+        throw new Error(`${line.product.slug} has no print files configured`);
+      }
+      return {
+        itemReferenceId: `${session.id}-${i}`,
+        productUid: resolveProductUid(line.product.gelatoGarment ?? "tee", line.size),
+        quantity: line.qty,
+        // One entry per print area (front, back, ...). The "type" value
+        // must match the print area name Gelato's product actually uses —
+        // see content/gelato.json's _todo for where that comes from.
+        files: areas.map((area) => ({
+          type: area,
+          url: `${origin}${printFiles[area]}`,
+        })),
+      };
+    });
 
     const shipping = session.collected_information?.shipping_details;
     const address = shipping?.address;

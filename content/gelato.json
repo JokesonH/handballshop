@@ -1,6 +1,5 @@
 {
-  "_todo": "FILL uidBySize FROM GELATO'S CATALOG BEFORE TAKING A REAL ORDER. Product UIDs encode garment, cut, size and colour in one string and cannot be guessed — pull them from Gelato's catalog API (GET https://product.gelatoapis.com/v3/catalogs/apparel/products) or copy them out of the dashboard. Orders will be refused at the API boundary while these are null; that is deliberate, see lib/gelato.ts.",
-
+  "_todo": "FILL uidBySize FROM GELATO'S CATALOG BEFORE TAKING A REAL ORDER. Product UIDs encode garment, cut, size and colour in one string and cannot be guessed — pull them from the product you build in the Gelato dashboard (Catalog / Create Product), one per size. Orders are refused at the API boundary while these are null; that is deliberate, see lib/gelato.ts.",
   "garments": {
     "tee": {
       "label": "Unisex heavyweight cotton tee",
@@ -13,10 +12,16 @@
       }
     }
   },
-
   "_shippingNote": "Flat rates, charged at checkout. Gelato's quote endpoint returns real per-destination rates and is the upgrade path — see docs/commerce.md. Amounts are cents in the store currency.",
   "shipping": {
-    "CA": { "amountCents": 900, "label": "Canada — 2–8 business days after production" },
-    "US": { "amountCents": 1400, "label": "United States — 3–10 business days after production" }
-  }
+    "CA": {
+      "amountCents": 900,
+      "label": "Canada — 2–8 business days after production"
+    },
+    "US": {
+      "amountCents": 1400,
+      "label": "United States — 3–10 business days after production"
+    }
+  },
+  "_printAreasTodo": "Every product's printFiles uses keys \"front\" and \"back\" as a placeholder guess. Those keys are sent as each file's \"type\" in the Gelato order payload and MUST exactly match the print area names shown in the Gelato dashboard for whatever product you build there (e.g. it might call them \"Front\", \"Chest Left\", \"Full Back\" — something specific to that garment's template, not necessarily \"front\"/\"back\"). Set up one product in Gelato first, note the exact area names it shows when you upload artwork, then rename the keys in every product's printFiles to match exactly (case-sensitive)."
 }
