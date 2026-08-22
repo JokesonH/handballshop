@@ -75,9 +75,9 @@
   "subcategory": "tees",
   "gelatoGarment": "tee",
   "printFiles": {
-    "front": "/print/sherwood-park-chest.png",
-    "back": "/print/sherwood-park-back.png",
-    "sleeve-left": "/print/sherwood-park-sleeve-left.png",
-    "sleeve-right": "/print/sherwood-park-sleeve-right.png"
+    "Front": "/print/sherwood-park-chest.png",
+    "Back": "/print/sherwood-park-back.png",
+    "Left sleeve": "/print/sherwood-park-sleeve-left.png",
+    "Right sleeve": "/print/sherwood-park-sleeve-right.png"
   }
 }

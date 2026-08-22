@@ -75,9 +75,9 @@
   "subcategory": "tees",
   "gelatoGarment": "tee",
   "printFiles": {
-    "front": "/print/new-brunswick-chest.png",
-    "back": "/print/new-brunswick-back.png",
-    "sleeve-left": "/print/new-brunswick-sleeve-left.png",
-    "sleeve-right": "/print/new-brunswick-sleeve-right.png"
+    "Front": "/print/new-brunswick-chest.png",
+    "Back": "/print/new-brunswick-back.png",
+    "Left sleeve": "/print/new-brunswick-sleeve-left.png",
+    "Right sleeve": "/print/new-brunswick-sleeve-right.png"
   }
 }

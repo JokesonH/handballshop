@@ -52,8 +52,8 @@ export type GelatoOrderItem = {
   itemReferenceId: string;
   productUid: string;
   quantity: number;
-  // "type" is the Gelato print-area name for this garment (e.g. "front",
-  // "back") — whatever the product's own placeholders are called.
+  // "type" is the Gelato print-area name for this garment (e.g. "Front",
+  // "Back", "Left sleeve") — whatever the product's own placements are called.
   files: { type: string; url: string }[];
 };
 

@@ -1,5 +1,5 @@
 {
-  "_todo": "All 5 sizes filled. STILL UNVERIFIED: every UID below ends in \"_gpr_4-0\", which in Gelato's own UID scheme means FRONT PRINT ONLY (0-4 = back only, 4-4 = front+back; 4-0 has no code at all for sleeves). Before trusting these for a real order, open the product in the Gelato dashboard and confirm it actually has 4 configured print positions (front, back, left sleeve, right sleeve) — if this UID came from a catalog/blank-garment search rather than your actual saved multi-position product, ordering against it may silently print the front only and drop back+sleeves.",
+  "_todo": "All 5 sizes filled, using the _gpr_4-0 catalog UID on purpose: the actual Gelato product page confirms 6 named print positions (Front, Back, Left sleeve, Right sleeve, Inner neck, Outer neck), so that suffix is evidently just how Gelato labels this SKU in its catalog search, not a hard cap on the Order API. NOT YET CONFIRMED BY A REAL ORDER — the first live test order is what actually proves back+sleeve files land correctly rather than getting silently dropped. Watch the Gelato dashboard closely on that first order.",
   "garments": {
     "tee": {
       "label": "Unisex heavyweight cotton tee (Gildan 5000, Natural)",
@@ -23,5 +23,5 @@
       "label": "United States — 3–10 business days after production"
     }
   },
-  "_printAreasTodo": "Every product's printFiles uses keys \"front\", \"back\", \"sleeve-left\" and \"sleeve-right\" (4 print locations, both sleeves carrying unique art, not a mirrored pair) as placeholder guesses. Those keys are sent as each file's \"type\" in the Gelato order payload and MUST exactly match the print area names shown in the Gelato dashboard for whatever product you build there (e.g. it might call them \"Front\", \"Back\", \"Left Sleeve\", \"Right Sleeve\" — something specific to that garment's template, not necessarily these exact strings). Set up the product in Gelato first, note the exact area names it shows when you upload artwork for each of the 4 placements, then rename the keys in every product's printFiles to match exactly (case-sensitive)."
+  "_printAreasNote": "Every product's printFiles uses keys \"Front\", \"Back\", \"Left sleeve\" and \"Right sleeve\" — confirmed against the real Gelato product page's print position names (it also offers \"Inner neck\" and \"Outer neck\", unused since there's no art for those yet). These are sent through unchanged as each file's \"type\" in the Gelato order payload, so the casing/spacing here must keep matching the dashboard exactly if Gelato ever renames a position."
 }

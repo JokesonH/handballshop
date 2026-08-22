@@ -75,9 +75,9 @@
   "subcategory": "tees",
   "gelatoGarment": "tee",
   "printFiles": {
-    "front": "/print/levis-chest.png",
-    "back": "/print/levis-back.png",
-    "sleeve-left": "/print/levis-sleeve-left.png",
-    "sleeve-right": "/print/levis-sleeve-right.png"
+    "Front": "/print/levis-chest.png",
+    "Back": "/print/levis-back.png",
+    "Left sleeve": "/print/levis-sleeve-left.png",
+    "Right sleeve": "/print/levis-sleeve-right.png"
   }
 }

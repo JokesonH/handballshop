@@ -75,9 +75,9 @@
   "subcategory": "tees",
   "gelatoGarment": "tee",
   "printFiles": {
-    "front": "/print/calgary-chest.png",
-    "back": "/print/calgary-back.png",
-    "sleeve-left": "/print/calgary-sleeve-left.png",
-    "sleeve-right": "/print/calgary-sleeve-right.png"
+    "Front": "/print/calgary-chest.png",
+    "Back": "/print/calgary-back.png",
+    "Left sleeve": "/print/calgary-sleeve-left.png",
+    "Right sleeve": "/print/calgary-sleeve-right.png"
   }
 }

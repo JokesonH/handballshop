@@ -53,9 +53,9 @@ export type Product = {
   gelatoGarment?: string;
   /**
    * Public paths to the print-ready rasters Gelato will fetch, keyed by
-   * print area — e.g. { front: "/print/edmonton-chest.png", back:
-   * "/print/edmonton-back.png", "sleeve-left": "/print/edmonton-sleeve-left.png",
-   * "sleeve-right": "/print/edmonton-sleeve-right.png" }. Four locations per
+   * print area — e.g. { Front: "/print/edmonton-chest.png", Back:
+   * "/print/edmonton-back.png", "Left sleeve": "/print/edmonton-sleeve-left.png",
+   * "Right sleeve": "/print/edmonton-sleeve-right.png" }. Four locations per
    * shirt, sleeves carrying unique art each (not a mirrored pair). The keys
    * must exactly match the print area names Gelato's own product builder
    * uses for this garment (visible once a product is set up in the Gelato
