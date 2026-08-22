@@ -1,5 +1,5 @@
 {
-  "_todo": "2XL is still null — get that UID from Gelato and fill it in. ALSO UNVERIFIED: the 4 UIDs below end in \"_gpr_4-0\", which in Gelato's own UID scheme means FRONT PRINT ONLY (0-4 = back only, 4-4 = front+back; 4-0 has no code at all for sleeves). Before trusting these for a real order, open the product in the Gelato dashboard and confirm it actually has 4 configured print positions (front, back, left sleeve, right sleeve) — if this UID came from a catalog/blank-garment search rather than your actual saved multi-position product, ordering against it may silently print the front only and drop back+sleeves. Orders are refused at the API boundary while a size is null; that is deliberate, see lib/gelato.ts.",
+  "_todo": "All 5 sizes filled. STILL UNVERIFIED: every UID below ends in \"_gpr_4-0\", which in Gelato's own UID scheme means FRONT PRINT ONLY (0-4 = back only, 4-4 = front+back; 4-0 has no code at all for sleeves). Before trusting these for a real order, open the product in the Gelato dashboard and confirm it actually has 4 configured print positions (front, back, left sleeve, right sleeve) — if this UID came from a catalog/blank-garment search rather than your actual saved multi-position product, ordering against it may silently print the front only and drop back+sleeves.",
   "garments": {
     "tee": {
       "label": "Unisex heavyweight cotton tee (Gildan 5000, Natural)",
@@ -8,7 +8,7 @@
         "M": "apparel_product_gca_t-shirt_gsc_crewneck_gcu_unisex_gqa_heavy-weight_gsi_m_gco_natural_gpr_4-0_gildan_5000",
         "L": "apparel_product_gca_t-shirt_gsc_crewneck_gcu_unisex_gqa_heavy-weight_gsi_l_gco_natural_gpr_4-0_gildan_5000",
         "XL": "apparel_product_gca_t-shirt_gsc_crewneck_gcu_unisex_gqa_heavy-weight_gsi_xl_gco_natural_gpr_4-0_gildan_5000",
-        "2XL": null
+        "2XL": "apparel_product_gca_t-shirt_gsc_crewneck_gcu_unisex_gqa_heavy-weight_gsi_2xl_gco_natural_gpr_4-0_gildan_5000"
       }
     }
   },
