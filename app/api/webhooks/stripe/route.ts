@@ -103,7 +103,13 @@ export async function POST(request: NextRequest) {
     const [firstName, ...rest] = (shipping?.name ?? "").trim().split(" ");
 
     const order = await createGelatoOrder({
-      orderType: "order",
+      // "draft" lands in Gelato as a reviewable order that is NOT sent to
+      // production or billed until someone approves it in the dashboard —
+      // set GELATO_DRAFT_MODE=true while proving out the pipeline so a test
+      // checkout can't accidentally print and ship a real garment. Flip it
+      // back off (or unset it) once a draft has been checked and approved
+      // manually, so real customer orders go straight to production again.
+      orderType: process.env.GELATO_DRAFT_MODE === "true" ? "draft" : "order",
       // Stripe's session id doubles as our idempotency key on Gelato's side.
       orderReferenceId: session.id,
       customerReferenceId: session.customer_details?.email ?? session.id,
