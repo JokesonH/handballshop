@@ -77,7 +77,7 @@
   "printFiles": {
     "Front": "/print/edmonton-chest.png",
     "Back": "/print/edmonton-back.png",
-    "Left sleeve": "/print/edmonton-sleeve-left.png",
-    "Right sleeve": "/print/edmonton-sleeve-right.png"
+    "left-sleeve": "/print/edmonton-sleeve-left.png",
+    "right-sleeve": "/print/edmonton-sleeve-right.png"
   }
 }

@@ -54,13 +54,15 @@ export type Product = {
   /**
    * Public paths to the print-ready rasters Gelato will fetch, keyed by
    * print area — e.g. { Front: "/print/edmonton-chest.png", Back:
-   * "/print/edmonton-back.png", "Left sleeve": "/print/edmonton-sleeve-left.png",
-   * "Right sleeve": "/print/edmonton-sleeve-right.png" }. Four locations per
-   * shirt, sleeves carrying unique art each (not a mirrored pair). The keys
-   * must exactly match the print area names Gelato's own product builder
-   * uses for this garment (visible once a product is set up in the Gelato
-   * dashboard); they're sent through unchanged as each file's "type" in the
-   * order payload. Must be reachable over HTTP — Gelato pulls them at
+   * "/print/edmonton-back.png", "left-sleeve": "/print/edmonton-sleeve-left.png",
+   * "right-sleeve": "/print/edmonton-sleeve-right.png" }. Four locations per
+   * shirt, sleeves carrying unique art each (not a mirrored pair). "Front"
+   * and "Back" are the literal names Gelato's dashboard shows and are
+   * order-confirmed; the sleeve keys are a hyphenated guess because the
+   * Order API rejects spaces in this field (see content/gelato.json's
+   * _printAreasNote) — not yet confirmed to land on the correct side. These
+   * are sent through unchanged as each file's "type" in the order payload.
+   * Must be reachable over HTTP — Gelato pulls them at
    * production time, they are not uploaded.
    */
   printFiles?: Record<string, string>;

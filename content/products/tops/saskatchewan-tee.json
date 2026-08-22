@@ -77,7 +77,7 @@
   "printFiles": {
     "Front": "/print/saskatchewan-chest.png",
     "Back": "/print/saskatchewan-back.png",
-    "Left sleeve": "/print/saskatchewan-sleeve-left.png",
-    "Right sleeve": "/print/saskatchewan-sleeve-right.png"
+    "left-sleeve": "/print/saskatchewan-sleeve-left.png",
+    "right-sleeve": "/print/saskatchewan-sleeve-right.png"
   }
 }

@@ -77,7 +77,7 @@
   "printFiles": {
     "Front": "/print/new-brunswick-chest.png",
     "Back": "/print/new-brunswick-back.png",
-    "Left sleeve": "/print/new-brunswick-sleeve-left.png",
-    "Right sleeve": "/print/new-brunswick-sleeve-right.png"
+    "left-sleeve": "/print/new-brunswick-sleeve-left.png",
+    "right-sleeve": "/print/new-brunswick-sleeve-right.png"
   }
 }

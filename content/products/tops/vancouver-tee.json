@@ -77,7 +77,7 @@
   "printFiles": {
     "Front": "/print/vancouver-chest.png",
     "Back": "/print/vancouver-back.png",
-    "Left sleeve": "/print/vancouver-sleeve-left.png",
-    "Right sleeve": "/print/vancouver-sleeve-right.png"
+    "left-sleeve": "/print/vancouver-sleeve-left.png",
+    "right-sleeve": "/print/vancouver-sleeve-right.png"
   }
 }

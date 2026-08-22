@@ -77,7 +77,7 @@
   "printFiles": {
     "Front": "/print/levis-chest.png",
     "Back": "/print/levis-back.png",
-    "Left sleeve": "/print/levis-sleeve-left.png",
-    "Right sleeve": "/print/levis-sleeve-right.png"
+    "left-sleeve": "/print/levis-sleeve-left.png",
+    "right-sleeve": "/print/levis-sleeve-right.png"
   }
 }

@@ -77,7 +77,7 @@
   "printFiles": {
     "Front": "/print/toronto-chest.png",
     "Back": "/print/toronto-back.png",
-    "Left sleeve": "/print/toronto-sleeve-left.png",
-    "Right sleeve": "/print/toronto-sleeve-right.png"
+    "left-sleeve": "/print/toronto-sleeve-left.png",
+    "right-sleeve": "/print/toronto-sleeve-right.png"
   }
 }

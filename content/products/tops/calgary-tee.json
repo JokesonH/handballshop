@@ -77,7 +77,7 @@
   "printFiles": {
     "Front": "/print/calgary-chest.png",
     "Back": "/print/calgary-back.png",
-    "Left sleeve": "/print/calgary-sleeve-left.png",
-    "Right sleeve": "/print/calgary-sleeve-right.png"
+    "left-sleeve": "/print/calgary-sleeve-left.png",
+    "right-sleeve": "/print/calgary-sleeve-right.png"
   }
 }

@@ -77,7 +77,7 @@
   "printFiles": {
     "Front": "/print/rosemont-chest.png",
     "Back": "/print/rosemont-back.png",
-    "Left sleeve": "/print/rosemont-sleeve-left.png",
-    "Right sleeve": "/print/rosemont-sleeve-right.png"
+    "left-sleeve": "/print/rosemont-sleeve-left.png",
+    "right-sleeve": "/print/rosemont-sleeve-right.png"
   }
 }

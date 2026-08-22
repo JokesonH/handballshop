@@ -77,7 +77,7 @@
   "printFiles": {
     "Front": "/print/sherwood-park-chest.png",
     "Back": "/print/sherwood-park-back.png",
-    "Left sleeve": "/print/sherwood-park-sleeve-left.png",
-    "Right sleeve": "/print/sherwood-park-sleeve-right.png"
+    "left-sleeve": "/print/sherwood-park-sleeve-left.png",
+    "right-sleeve": "/print/sherwood-park-sleeve-right.png"
   }
 }

@@ -77,7 +77,7 @@
   "printFiles": {
     "Front": "/print/champlain-chest.png",
     "Back": "/print/champlain-back.png",
-    "Left sleeve": "/print/champlain-sleeve-left.png",
-    "Right sleeve": "/print/champlain-sleeve-right.png"
+    "left-sleeve": "/print/champlain-sleeve-left.png",
+    "right-sleeve": "/print/champlain-sleeve-right.png"
   }
 }

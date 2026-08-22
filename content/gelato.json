@@ -1,5 +1,5 @@
 {
-  "_todo": "All 5 sizes filled, using the _gpr_4-0 catalog UID on purpose: the actual Gelato product page confirms 6 named print positions (Front, Back, Left sleeve, Right sleeve, Inner neck, Outer neck), so that suffix is evidently just how Gelato labels this SKU in its catalog search, not a hard cap on the Order API. NOT YET CONFIRMED BY A REAL ORDER — the first live test order is what actually proves back+sleeve files land correctly rather than getting silently dropped. Watch the Gelato dashboard closely on that first order.",
+  "_todo": "All 5 sizes filled, using the _gpr_4-0 catalog UID on purpose — a real order confirmed it isn't a front-only cap (Front and Back both passed Gelato's validation in the first test). REMAINING QUESTION: \"left-sleeve\"/\"right-sleeve\" (see _printAreasNote) haven't been proven correct yet, only proven to satisfy Gelato's character-set rule for the \"type\" field — that's different from proving they land on the actual left/right sleeve position. Check the resulting draft order in the Gelato dashboard for correct placement before trusting this for a real customer order.",
   "garments": {
     "tee": {
       "label": "Unisex heavyweight cotton tee (Gildan 5000, Natural)",
@@ -23,5 +23,5 @@
       "label": "United States — 3–10 business days after production"
     }
   },
-  "_printAreasNote": "Every product's printFiles uses keys \"Front\", \"Back\", \"Left sleeve\" and \"Right sleeve\" — confirmed against the real Gelato product page's print position names (it also offers \"Inner neck\" and \"Outer neck\", unused since there's no art for those yet). These are sent through unchanged as each file's \"type\" in the Gelato order payload, so the casing/spacing here must keep matching the dashboard exactly if Gelato ever renames a position."
+  "_printAreasNote": "Every product's printFiles uses keys \"Front\", \"Back\", \"left-sleeve\" and \"right-sleeve\". \"Front\"/\"Back\" are the literal dashboard labels and passed a real order untouched. The dashboard calls the other two \"Left sleeve\"/\"Right sleeve\", but the Order API rejects any \"type\" value containing a space (\"Only letters, digits, underscore, period, and hyphen are allowed\") — so those two are a hyphenated guess at Gelato's underlying slug, not a confirmed name. If a test order's back/front print correctly but the sleeves come back blank, wrong-sided, or rejected again, that guess needs correcting — check whether Gelato's product API (GET the product) exposes the real machine key for those two positions instead of guessing again by trial and error."
 }

@@ -77,7 +77,7 @@
   "printFiles": {
     "Front": "/print/celtique-chest.png",
     "Back": "/print/celtique-back.png",
-    "Left sleeve": "/print/celtique-sleeve-left.png",
-    "Right sleeve": "/print/celtique-sleeve-right.png"
+    "left-sleeve": "/print/celtique-sleeve-left.png",
+    "right-sleeve": "/print/celtique-sleeve-right.png"
   }
 }
